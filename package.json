@@ -4,12 +4,14 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
+    "start": "open -a 'Google Chrome' http://localhost:4321/ && astro dev",
+    "build": "astro build && jampack ./dist",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.10"
+    "astro": "^4.16.10",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^6.1.2"
   }
 }

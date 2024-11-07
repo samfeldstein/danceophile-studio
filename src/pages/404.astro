@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+
+import { dev } from "../../config.mjs";
+---
+
+<Base title="Page Not Found" description="Page not found.">
+  <p>
+    It looks like this page doesn't exist. If you think this is a mistake,
+    please <a href=`mailto:${dev.email}`>email me</a>.
+  </p>
+</Base>

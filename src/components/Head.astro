@@ -1,0 +1,27 @@
+---
+// Components
+import Icons from "../components/Icons.astro";
+
+// Data
+import { site } from "../../config.mjs";
+
+// Styles
+import "/src/styles/global.css";
+
+const { title, description } = Astro.props;
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+  <meta name="description" content={description || site.description} />
+  <title>{title} | {site.title}</title>
+  <Icons />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title={site.title}
+    href=`${site.url}/feed.xml`
+  />
+</head>
