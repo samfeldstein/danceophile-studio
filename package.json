@@ -13,5 +13,8 @@
     "astro": "^4.16.10",
     "autoprefixer": "^10.4.20",
     "cssnano": "^6.1.2"
+  },
+  "devDependencies": {
+    "@divriots/jampack": "^0.30.0"
   }
 }
