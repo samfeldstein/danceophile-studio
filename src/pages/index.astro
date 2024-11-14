@@ -3,13 +3,31 @@ import Base from "../layouts/Base.astro";
 ---
 
 <Base title="Home">
-  <p>
-    Danceophile Studio in Boulder offers lessons in ballroom, swing, folk,
-    contra, and country dance, led by Colorado Legends of Dance recipient Tom
-    Masterson. Our Postoley Dance Ensemble offers a strong focus on Ukrainian
-    culture through performances and workshops for schools, festivals, and
-    events. Classes are open to all experience levels—no partner needed.
-  </p>
-
-  <h2>Upcoming Events</h2>
+  <section>
+    <h2 class="meet">Meet Tom Masterson</h2>
+    <p>
+      Tom is the founder and director of Postoley Dance Ensemble, a performing
+      ethnic dance company specializing in the dance and culture of Ukraine,
+      Poland, and eastern Europe. He has studied with several world-renowned
+      companies, including the Bukovinian and Virsky ensembles in Ukraine, and
+      the Marie Curie Skodlowska University Institute for Choreography in
+      Lublin, Poland.
+    </p>
+  </section>
 </Base>
+
+<style is:global>
+  h1 {
+    position: absolute;
+    translate: -1000%;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .meet {
+    color: var(--color-2);
+  }
+</style>
