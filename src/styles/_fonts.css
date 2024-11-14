@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Arizonia";
+  src: local("Arizonia"),
+    url("/fonts/Arizonia-Regular.woff2") format("woff2"),
+    url("/fonts/Arizonia-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lissain";
+  src: local("Lissain"),
+    url("/fonts/Lissain.woff2") format("woff2"),
+    url("/fonts/Lissain.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ostrovsky";
+  src: local("Ostrovsky"),
+    url("/fonts/OstrovskyBold.woff2") format("woff2"),
+    url("/fonts/OstrovskyBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tinos";
+  src: local("Tinos"),
+    url("/fonts/Tinos-Regular.woff2") format("woff2"),
+    url("/fonts/Tinos-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
