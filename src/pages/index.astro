@@ -1,19 +1,51 @@
 ---
 import Base from "../layouts/Base.astro";
+import HorizontalRule from "../components/HorizontalRule.astro";
+import { Picture } from "astro:assets";
+import cover from "/src/images/danceophile-cover.jpg";
+import tom from "/src/images/tom.jpg";
 ---
 
 <Base title="Home">
+  <Picture
+    src={cover}
+    formats={["avif", "webp", "jpeg"]}
+    alt="Ukrainian folk dancers performing on a stage."
+  />
+  <HorizontalRule />
   <section>
     <h2 class="meet">Meet Tom Masterson</h2>
-    <p>
-      Tom is the founder and director of Postoley Dance Ensemble, a performing
-      ethnic dance company specializing in the dance and culture of Ukraine,
-      Poland, and eastern Europe. He has studied with several world-renowned
-      companies, including the Bukovinian and Virsky ensembles in Ukraine, and
-      the Marie Curie Skodlowska University Institute for Choreography in
-      Lublin, Poland.
-    </p>
+    <div class="content">
+      <Picture
+        src={tom}
+        formats={["avif", "webp", "jpeg"]}
+        alt="A passport photo of Tom Masterson."
+      />
+      <p>
+        Tom is the founder and director of Postoley Dance Ensemble, a performing
+        ethnic dance company specializing in the dance and culture of Ukraine,
+        Poland, and eastern Europe. He has studied with several world-renowned
+        companies, including the Bukovinian and Virsky ensembles in Ukraine, and
+        the Marie Curie Skodlowska University Institute for Choreography in
+        Lublin, Poland.
+      </p>
+      <a class="more" href="/tom-masterson">More About Tom ☞</a>
+    </div>
   </section>
+
+  <HorizontalRule />
+
+  <div class="flag">
+    <p>
+      As director of the <a href="/postoley"
+        >Postoley Ukrainian Dance Ensemble</a
+      >, I call upon the people and nations of the world to take whatever action
+      is needed to <em><strong>halt</strong></em> Russia’s invasion of Ukraine and
+      <em><strong>restore</strong></em> Ukraine’s territorial integrity.
+    </p>
+  </div>
+
+  <HorizontalRule />
 </Base>
 
 <style is:global>
@@ -22,12 +54,70 @@ import Base from "../layouts/Base.astro";
     translate: -1000%;
   }
 
-  h2 {
-    text-align: center;
-    font-size: 3rem;
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    max-width: 30rem;
   }
 
   .meet {
     color: var(--color-2);
+    text-align: center;
+  }
+
+  a.more {
+    text-align: center;
+    display: block;
+    font-family: var(--font-3);
+    color: var(--color-2);
+  }
+
+  .flag {
+    margin: 4rem 0;
+    padding: 2rem;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    filter: drop-shadow(0px 2px 2px #4e4e4e);
+    background: rgb(0, 87, 183);
+    background: -moz-linear-gradient(
+      180deg,
+      rgba(0, 87, 183, 1) 50%,
+      rgba(255, 221, 0, 1) 50%
+    );
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(0, 87, 183, 1) 50%,
+      rgba(255, 221, 0, 1) 50%
+    );
+    background: linear-gradient(
+      180deg,
+      rgba(0, 87, 183, 1) 50%,
+      rgba(255, 221, 0, 1) 50%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0057b7",endColorstr="#ffdd00",GradientType=1);
+  }
+
+  .flag p {
+    background-color: var(--color-1);
+    padding: 1rem;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    line-height: 2;
+    font-variant: small-caps;
+    font-family: var(--font-5);
+    filter: drop-shadow(0px 2px 2px #4e4e4e);
   }
 </style>

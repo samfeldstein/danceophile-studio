@@ -1,8 +1,6 @@
 ---
 import Logo from "./Logo.astro";
 import Nav from "./Nav.astro";
-import { Picture } from "astro:assets";
-import cover from "/src/images/danceophile-cover.jpg";
 ---
 
 <header>
@@ -10,11 +8,6 @@ import cover from "/src/images/danceophile-cover.jpg";
     <Logo />
   </div>
   <Nav />
-  <Picture
-    src={cover}
-    formats={["avif", "webp", "jpeg"]}
-    alt="Ukrainian folk dancers performing on a stage."
-  />
 </header>
 
 <style>
