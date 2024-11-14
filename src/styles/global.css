@@ -48,6 +48,13 @@ p {
 a {
   font-family: var(--font-4);
   color: var(--color-2);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
 }
 
 picture {
