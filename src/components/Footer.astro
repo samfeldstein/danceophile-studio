@@ -1,1 +1,52 @@
-<p>Built with <a href="https://astro.build">Astro</a>.</p>
+<footer>
+  <a class="logo" href="/">
+    <div>Danceophile</div>
+    <div>Studio</div>
+  </a>
+  <div class="content">
+    <div class="follow">
+      <span>Facebook</span>
+      <span>Follow Danceophile</span>
+      <span>Instagram</span>
+    </div>
+    <div class="contact">
+      <span>Address</span>
+      <span>Get in Touch</span>
+      <span>masterst@colorado.edu</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 3rem;
+    text-decoration: none;
+    text-shadow:
+      -0.5px -0.5px 0 #000,
+      0.5px -0.5px 0 #000,
+      -0.5px 0.5px 0 #000,
+      0.5px 0.5px 0 #000;
+  }
+
+  .content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .follow,
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #000;
+    border-width: 1px;
+  }
+</style>
