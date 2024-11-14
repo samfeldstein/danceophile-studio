@@ -24,6 +24,6 @@ pnpm-debug.log*
 .idea/
 
 # Other
-.vscode/
-.jampack/
+.vscode
+.jampack
 package-lock.json

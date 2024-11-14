@@ -1,4 +1,12 @@
 @import url("/src/styles/_reset.css");
+@import url("/src/styles/_config.css");
+@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap');
+
+body {
+  background-color: var(--color-1);
+  max-width: 60rem;
+  margin: 0 auto;
+}
 
 header {
   text-align: center;
@@ -6,4 +14,10 @@ header {
 
 a.logo {
   font-size: 2rem;
+}
+
+h1, h2 {
+  font-family: var(--font-1);
+  font-size: 4rem;
+  font-weight: lighter;
 }

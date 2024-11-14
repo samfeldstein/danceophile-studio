@@ -1,11 +1,11 @@
 export const site = {
-  title: "Postoley Dance Ensemble",
+  title: "Danceophile Studio",
   description:
-    "Discover the Postoley Ukrainian Dance Ensemble! Join us to learn vibrant Ukrainian dances, celebrate cultural heritage, and connect with a community passionate about Ukrainian traditions. Welcoming dancers of all levels!",
-  url: "https://postoley.netlify.app",
+    "Danceophile Studio in Boulder offers lessons in ballroom, swing, folk, contra, and country dance, led by Colorado Legends of Dance recipient Tom Masterson. Our Postoley Dance Ensemble offers a strong focus on Ukrainian culture through performances and workshops for schools, festivals, and events. Classes are open to all experience levels—no partner needed.",
+  url: "https://danceophile.netlify.app",
 };
 
 export const dev = {
   name: "Sam Feldstein",
-  email: "sam@samfeldstein.xyz"
+  email: "samuelfeldstein@proton.me"
 }

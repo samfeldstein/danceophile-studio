@@ -1,3 +1,11 @@
 :root {
-  --color-1: #fff;
+  --color-1: #FFF2E8;
+  --color-2: #C70002;
+  --color-3: #006EE7;
+  --color-4: #212121;
+
+  --font-1: "Lissain Didone";
+  --font-2: "Arizonia";
+  --font-3: "Ostrovsky";
+  --font-4: "Lissain";
 }

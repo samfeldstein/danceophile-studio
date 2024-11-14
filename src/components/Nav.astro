@@ -1,3 +1,46 @@
-<nav>
-  <a href="/">Home</a>
-</nav>
+<div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/events">Events</a>
+    <a href="/postoley">Postoley</a>
+    <a href="/lessons">Lessons</a>
+    <a href="/gallery">Gallery</a>
+  </nav>
+</div>
+
+<style>
+  div {
+    background-color: var(--color-3);
+    color: var(--color-1);
+    padding: 1rem;
+    border: 1px solid black;
+  }
+
+  nav {
+    background-color: var(--color-1);
+    padding: 1rem;
+    filter: drop-shadow(0px 2px 2px #4e4e4e);
+    border-radius: 2px;
+    font-family: "Lissain";
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border: 1px solid black;
+  }
+
+  nav a {
+    color: var(--color-4);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 5px;
+    transition:
+      color 0.3s ease,
+      text-decoration-color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: var(--color-2);
+    text-decoration-color: var(--color-2);
+  }
+</style>
