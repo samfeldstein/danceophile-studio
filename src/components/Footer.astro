@@ -4,9 +4,9 @@ import Copyright from "./Copyright.astro";
 
 <footer>
   <a class="logo" href="/">Danceophile<br />Studio</a>
-  <div class="title">Follow Danceophile</div>
+
   <div class="social">
-    <a href="">
+    <a class="instagram" href="">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"
@@ -17,7 +17,7 @@ import Copyright from "./Copyright.astro";
         ></path></svg
       >
     </a>
-    <a href="https://www.facebook.com/tom.masterson.3348/">
+    <a class="facebook" href="https://www.facebook.com/tom.masterson.3348/">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"
@@ -29,87 +29,45 @@ import Copyright from "./Copyright.astro";
       >
     </a>
   </div>
-
-  <div class="title">Get in Touch</div>
-  <div class="contact">
-    <div class="address">
-      <div>Postoley</div>
-      <div>250 31st St</div>
-      <div>Boulder, CO 80305</div>
-    </div>
-    <div class="email phone">
-      <a href="mailto:masterst@colorado.edu">masterst@colorado.edu</a>
-      <a href="tel:+13034996363">(303) 499-6363</a>
-    </div>
-  </div>
   <Copyright />
+
+  <style>
+    footer {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: calc(2rem + 2vw);
+      text-decoration: none;
+      filter: drop-shadow(0px 1px 1px #717171);
+      margin-bottom: 1rem;
+      color: var(--color-3);
+    }
+
+    .social {
+      display: flex;
+      gap: 2rem;
+      border-style: solid;
+      border-radius: 5px;
+      border-color: black;
+      padding: 0.5rem 1rem;
+      background-color: white;
+      width: 100%;
+      max-width: 10rem;
+      justify-content: space-evenly;
+    }
+
+    svg {
+      transition: fill 0.3s ease-in-out;
+    }
+
+    svg:hover,
+    svg:focus {
+      fill: var(--color-2); /* Hover color */
+    }
+  </style>
 </footer>
-
-<style>
-  footer {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    padding: 0.5rem;
-  }
-
-  a:not(.logo) {
-    /* font-family: var(--font-5); */
-    color: var(--color-3);
-  }
-
-  div {
-    font-size: 0.65rem;
-  }
-
-  .logo {
-    font-size: calc(2rem + 1vw);
-    text-decoration: none;
-    filter: drop-shadow(0px 1px 1px #717171);
-    margin-bottom: 2rem;
-  }
-
-  .title {
-    font-family: var(--font-3);
-  }
-
-  .social,
-  .contact {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    border-radius: 5px;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    background-color: white;
-    filter: drop-shadow(0px 1px 1px #717171);
-  }
-
-  .email.phone {
-    display: flex;
-    flex-direction: column;
-    gap: 0.55rem;
-    text-align: right;
-  }
-
-  .address {
-    font-family: var(--font-1);
-    text-align: left;
-    /* font-style: italic; */
-  }
-
-  svg {
-    fill: var(--color-3);
-    transition: fill 0.3s ease-in-out;
-  }
-
-  svg:hover,
-  svg:focus {
-    fill: var(--color-2); /* Hover color */
-  }
-</style>
