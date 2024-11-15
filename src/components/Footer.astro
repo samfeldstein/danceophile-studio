@@ -6,8 +6,9 @@ import Copyright from "./Copyright.astro";
   <a class="logo" href="/">Danceophile<br />Studio</a>
 
   <div class="social">
-    <a class="instagram" href="">
+    <a href="">
       <svg
+        class="instagram"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"
         width="40"
@@ -17,8 +18,9 @@ import Copyright from "./Copyright.astro";
         ></path></svg
       >
     </a>
-    <a class="facebook" href="https://www.facebook.com/tom.masterson.3348/">
+    <a href="https://www.facebook.com/tom.masterson.3348/">
       <svg
+        class="facebook"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"
         width="40"
@@ -50,21 +52,49 @@ import Copyright from "./Copyright.astro";
     .social {
       display: flex;
       gap: 2rem;
-      border-style: solid;
+      /* border-style: solid;
       border-radius: 5px;
       border-color: black;
-      border-width: 1px;
+      border-width: 1px; */
       padding: 0.75rem 1rem;
-      background-color: white;
+      /* background-color: white; */
       width: 100%;
       max-width: 12rem;
       justify-content: space-evenly;
       align-items: center;
-      filter: drop-shadow(0px 1px 1px #717171);
+      /* filter: drop-shadow(0px 1px 1px #717171); */
     }
 
     svg {
-      transition: fill 0.3s ease-in-out;
+      /* background-color: white; */
+      transition:
+        fill 0.2s ease-in-out,
+        background-color 0.2s ease;
+      filter: drop-shadow(0px 1px 1px #717171);
+      border-radius: 7px;
+      /* fill: var(--color-2); */
+    }
+
+    .facebook {
+      background-color: var(--color-1);
+      fill: var(--color-2);
+    }
+
+    .facebook:hover,
+    .facebook:focus {
+      background-color: var(--color-2);
+      fill: var(--color-1);
+    }
+
+    .instagram {
+      background-color: var(--color-2);
+      fill: var(--color-1);
+    }
+
+    .instagram:hover,
+    .instagram:focus {
+      background-color: var(--color-1);
+      fill: var(--color-2);
     }
 
     svg:hover,
