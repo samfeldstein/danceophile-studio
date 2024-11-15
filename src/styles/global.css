@@ -22,11 +22,7 @@ h2 {
   font-family: var(--font-1);
   font-size: 4rem;
   font-weight: lighter;
-  text-shadow:
-    -.5px -.5px 0 #000,
-    .5px -.5px 0 #000,
-    -.5px .5px 0 #000,
-    .5px .5px 0 #000;
+  filter: drop-shadow(0px 1px 1px #717171);
 }
 
 h2 {
@@ -41,6 +37,7 @@ p {
   font-size: 1.25rem;
   text-align: justify;
   color: black;
+  line-height: 1.5;
 }
 
 a {

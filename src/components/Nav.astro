@@ -1,18 +1,33 @@
-<div>
+<div class="parent">
   <details>
     <summary>Menu</summary>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/events">Events</a>
-      <a href="/postoley">Postoley</a>
-      <a href="/lessons">Lessons</a>
-      <a href="/gallery">Gallery</a>
-    </nav>
+    <div class="content">
+      <div class="title">Navigation</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/events">Events</a>
+        <a href="/postoley">Postoley</a>
+        <a href="/lessons">Lessons</a>
+        <a href="/gallery">Gallery</a>
+      </nav>
+      <div class="follow">
+        <div class="title">Follow</div>
+        <div class="social">
+          <a href="">Instagram</a>
+          <a href="https://www.facebook.com/tom.masterson.3348/">Facebook</a>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="title">Contact</div>
+        <a href="mailto:masterst@colorado.edu">masterst@colorado.edu</a>
+      </div>
+    </div>
   </details>
 </div>
 
 <style>
-  div {
+  div.parent {
     background-color: var(--color-3);
     color: var(--color-1);
     margin: 2rem 0.25rem 0 0.25rem;
@@ -26,48 +41,80 @@
 
   details {
     font-family: var(--font-1);
+    overflow: hidden; /* Prevents content from spilling out during the animation */
+    transition: max-height 0.5s ease; /* Smooth transition */
+    max-height: 1.5em; /* Initial height for summary only */
   }
 
-  nav {
+  details[open] {
+    max-height: 100vh; /* Expands the details smoothly when opened */
+  }
+
+  .content {
     background-color: var(--color-1);
     padding: 1rem;
-    filter: drop-shadow(0px 2px 2px #4e4e4e);
-    font-family: "Lissain";
+    gap: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
+    align-items: center;
     border-width: 1px;
     border-style: solid;
     border-color: black;
     border-radius: 2px;
     margin-top: 1rem;
-  }
-
-  nav a {
     color: var(--color-4);
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-underline-offset: 5px;
-    transition:
-      color 0.3s ease,
-      text-decoration-color 0.3s ease;
   }
 
-  nav a:hover,
-  nav a:focus {
-    color: var(--color-2);
-    text-decoration-color: var(--color-2);
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
   }
 
   summary {
     cursor: pointer;
     list-style: none;
+    filter: drop-shadow(0px 1px 1px #393939);
   }
 
   summary::-webkit-details-marker,
   summary::marker {
     display: none;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .contact,
+  .follow {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  a {
+    font-family: var(--font-5);
+    font-size: 1.25rem;
+    font-variant: small-caps;
+    padding: 0.25rem 0.5rem;
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+    border-radius: 2px;
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--color-1);
+    background-color: var(--color-2);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    filter: drop-shadow(0px 2px 2px #4e4e4e);
+  }
+
+  .social {
+    display: flex;
+    gap: 2rem;
   }
 </style>
