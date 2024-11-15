@@ -17,24 +17,17 @@ main {
   padding: 0 0.5rem;
 }
 
-h1,
 h2 {
-  font-family: var(--font-1);
-  font-size: 4rem;
-  font-weight: lighter;
-  filter: drop-shadow(0px 1px 1px #717171);
-}
-
-h2 {
-  font-size: 4rem;
+  font-family: var(--font-3);
+  font-size: calc(1rem + 5vw);
   margin-top: 0;
   color: inherit;
   text-align: center;
+  filter: drop-shadow(0px 1px 1px #717171);
 }
 
 p {
   font-family: var(--font-5);
-  font-size: 1.25rem;
   text-align: justify;
   color: black;
   line-height: 1.5;

@@ -1,0 +1,24 @@
+<div>
+  <p>
+    Site designed and built by <a href="https://samfeldstein.xyz"
+      >Sam Feldstein</a
+    >.
+  </p>
+  <p>
+    Copyright © <span id="year"></span>
+    <a href="/tom-masterson">Tom Masterson</a>, All Rights Reserved.
+  </p>
+</div>
+
+<style>
+  p {
+    font-size: 0.5rem;
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+  }
+</style>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>

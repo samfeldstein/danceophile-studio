@@ -11,7 +11,7 @@
         <a href="/gallery">Gallery</a>
       </nav>
       <div class="follow">
-        <div class="title">Follow</div>
+        <div class="title">Follow Us</div>
         <div class="social">
           <a href="">Instagram</a>
           <a href="https://www.facebook.com/tom.masterson.3348/">Facebook</a>
@@ -41,14 +41,16 @@
 
   details {
     font-family: var(--font-1);
-    overflow: hidden; /* Prevents content from spilling out during the animation */
-    transition: max-height 0.5s ease; /* Smooth transition */
-    max-height: 1.5em; /* Initial height for summary only */
+    /* Smooth open */
+    /* overflow: hidden;
+    transition: max-height 0.5s ease;
+    max-height: 1.5em; */
   }
 
-  details[open] {
-    max-height: 100vh; /* Expands the details smoothly when opened */
-  }
+  /* Expands the details smoothly when opened */
+  /* details[open] {
+    max-height: 100vh;
+  } */
 
   .content {
     background-color: var(--color-1);
@@ -68,7 +70,8 @@
   nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
+    justify-content: space-evenly;
   }
 
   summary {
@@ -82,10 +85,6 @@
     display: none;
   }
 
-  .title {
-    font-size: 1.5rem;
-  }
-
   .contact,
   .follow {
     display: flex;
@@ -95,7 +94,6 @@
 
   a {
     font-family: var(--font-5);
-    font-size: 1.25rem;
     font-variant: small-caps;
     padding: 0.25rem 0.5rem;
     transition:
@@ -115,6 +113,6 @@
 
   .social {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
   }
 </style>
