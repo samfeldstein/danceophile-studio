@@ -2,39 +2,169 @@
 import Base from "../layouts/Base.astro";
 import HorizontalRule from "../components/HorizontalRule.astro";
 import { Picture } from "astro:assets";
-import cover from "/src/images/danceophile-cover.jpg";
+import cover from "/src/images/lessons-cover.jpg";
 ---
 
 <Base title="Dance Lessons">
-  <h1>Dance Lessons</h1>
   <Picture
     src={cover}
     formats={["avif", "webp", "jpeg"]}
-    alt="Ukrainian folk dancers performing on a stage."
+    alt="Two ballroom swing dancers dancing under lights."
   />
-  <p>
+  <h1>Dance Lessons</h1>
+  <p class="intro">
     Danceophile Studio offers lessons in ballroom, swing, folk, contra, and
     country dance, led by Colorado Legends of Dance recipient <a href="/about/"
       >Tom Masterson</a
-    >. Our Postoley Dance Ensemble offers a strong focus on Ukrainian culture
-    through performances and workshops for schools, festivals, and events.
-    Classes are open to all experience levels—no partner needed.
+    >. <strong
+      >Classes are open to all experience levels. No partner needed.</strong
+    >
   </p>
+
+  <HorizontalRule />
+
   <section class="red">
     <h2>Introduction to Ballroom Dance</h2>
     <p>
-      An introduction to the smooth Foxtrot, upbeat Swing, graceful Waltz and
-      seductive Tango. No experience needed. Singles welcome. You do not need to
-      bring a partner. Emphasis on leading, following, and communicating with a
-      partner.
+      A four-week introduction to the smooth Foxtrot, upbeat Swing, graceful
+      Waltz, and seductive Tango with an emphasis on leading, following, and
+      communicating with a partner.
     </p>
-    <div>
-      <div>When?</div>
-      <div>Sundays, 6:30PM - 8PM</div>
+    <p><strong>No experience or partner needed.</strong></p>
+    <div class="details">
+      <div class="time-place">
+        <div>
+          <strong class="title">Place</strong>
+          <a
+            class="address"
+            href="https://maps.app.goo.gl/7fttA6CCH5VmFk1S9"
+            target="_blank"
+          >
+            <div>Danceophile Studio</div>
+            <div>250 31st St</div>
+            <div>Boulder, CO 80305</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="time">
+        <strong class="title">Time</strong>
+        <div>Sundays, 6:30PM - 8PM</div>
+      </div>
+
+      <div class="rates">
+        <strong class="title">Rates</strong>
+        <div class="rates">
+          <div>Couples: $105</div>
+          <div>Singles: $55</div>
+        </div>
+      </div>
+      <div>
+        <p class="centered">
+          <em>Rates cover the <strong>entire four-week class.</strong></em>
+        </p>
+        <p class="centered">
+          <em>Registration deadline: <strong>Friday, Jan 15</strong></em>
+        </p>
+      </div>
     </div>
-    <div>
-      $105/couple, $55/person for entire 4-week class. Registration deadline:
-      Friday, Jan 15
+  </section>
+
+  <HorizontalRule />
+
+  <section class="blue">
+    <h2>Folk Dancing in the Mountains</h2>
+    <p>
+      Join us at the Nederland Community Center to meet wonderful folks, eat
+      great snacks, and dance fun dances from around the world.
+    </p>
+    <p><strong>No partner or experience needed.</strong></p>
+
+    <div class="details">
+      <div class="time-place">
+        <div>
+          <strong class="title">Place</strong>
+          <a
+            class="address"
+            href="https://maps.app.goo.gl/AiY4UTiUy9nm1upr5"
+            target="_blank"
+          >
+            <div>Nederland Community Center</div>
+            <div>750 CO-72</div>
+            <div>Nederland, CO 80466</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="time">
+        <strong class="title">Time</strong>
+        <div>Mondays, 7PM - 9:15PM</div>
+      </div>
+
+      <div class="rates">
+        <strong class="title">Cost</strong>
+        <div class="rates">Free</div>
+      </div>
+      <div>
+        <p class="centered">
+          Carpool leaves at 6:15 from <a
+            href="https://maps.app.goo.gl/9fPoJrqXurqbcnh4A"
+            target="_blank">Danceophile Studio</a
+          > or 6:30 from the <a
+            href="https://maps.app.goo.gl/TTebo7TbQ5mVFcwy5"
+            target="_blank">Justice Center</a
+          > parking lot at 6th & Canyon.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <HorizontalRule />
+
+  <section class="red">
+    <h2>Wedding Dance Choreography & Private Instruction</h2>
+    <p>
+      Private instruction in Ballroom, Swing, Folk, Contra, Country, and
+      Performance, choreographed to your favorite music. We are happy to
+      instruct individuals, couples, groups, parties, and wedding receptions.
+    </p>
+
+    <div class="details">
+      <div class="time-place">
+        <div>
+          <strong class="title">Place</strong>
+          <a
+            class="address"
+            href="https://maps.app.goo.gl/7fttA6CCH5VmFk1S9"
+            target="_blank"
+          >
+            <div>Danceophile Studio</div>
+            <div>250 31st St</div>
+            <div>Boulder, CO 80305</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="time">
+        <strong class="title">Time</strong>
+        <div>By appointment</div>
+      </div>
+
+      <div class="rates">
+        <strong class="title">Rates</strong>
+        <div class="rates">
+          <div>Couples: ?</div>
+          <div>Singles: ?</div>
+        </div>
+      </div>
+      <div>
+        <p class="centered">
+          To book a class, email us at <a href="mailto:masterst@colorado.edu"
+            >masterst@colorado.edu</a
+          > or call us at
+          <a href="tel:+13034996363">(303) 499-6363</a>.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -44,5 +174,41 @@ import cover from "/src/images/danceophile-cover.jpg";
 <style>
   h2 {
     margin-top: 1em;
+  }
+
+  .intro {
+    padding: 1rem;
+  }
+
+  .intro,
+  .details {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: var(--font-5);
+    font-variant: small-caps;
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  .details a {
+    font-family: var(--font-5);
+  }
+
+  .time {
+    text-align: right;
+  }
+
+  .title {
+    font-family: var(--font-3);
+  }
+
+  .centered {
+    text-align: center;
   }
 </style>

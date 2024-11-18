@@ -35,6 +35,7 @@ h1 {
 h1,
 h2 {
   font-family: var(--font-3);
+  text-wrap: pretty;
 }
 
 h1,
@@ -46,7 +47,7 @@ h2,
 }
 
 h2 {
-  font-size: calc(1rem + 5vw);
+  font-size: calc(2rem + 4vw);
   margin-top: 0;
   color: inherit;
   font-variant: small-caps;
@@ -75,12 +76,12 @@ picture {
   filter: drop-shadow(0px 2px 2px #4e4e4e);
 }
 
-.blue,
-  .blue a {
-    color: var(--color-3);
-  }
+.blue h2,
+.blue a {
+  color: var(--color-3);
+}
 
-  .red,
-  .red a {
-    color: var(--color-2);
-  }
+.red h2,
+.red a {
+  color: var(--color-2);
+}

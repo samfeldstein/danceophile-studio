@@ -37,3 +37,17 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Tinos Bold";
+  src: local("Tinos Bold"),
+    url("/fonts/Tinos-Bold.woff2") format("woff2"),
+    url("/fonts/Tinos-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+strong, b {
+  font-family: "Tinos Bold";
+}

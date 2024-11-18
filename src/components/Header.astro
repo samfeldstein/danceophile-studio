@@ -7,13 +7,14 @@ import Nav from "./Nav.astro";
   <div>
     <Logo />
   </div>
-  <Nav />
 </header>
+<!-- This is outside the header because if it's inside sticky stops working. -->
+<Nav />
 
 <style>
   header {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    margin-bottom: 2rem;
   }
 </style>
