@@ -1,0 +1,48 @@
+---
+import Base from "../layouts/Base.astro";
+import HorizontalRule from "../components/HorizontalRule.astro";
+import { Picture } from "astro:assets";
+import cover from "/src/images/danceophile-cover.jpg";
+---
+
+<Base title="Dance Lessons">
+  <h1>Dance Lessons</h1>
+  <Picture
+    src={cover}
+    formats={["avif", "webp", "jpeg"]}
+    alt="Ukrainian folk dancers performing on a stage."
+  />
+  <p>
+    Danceophile Studio offers lessons in ballroom, swing, folk, contra, and
+    country dance, led by Colorado Legends of Dance recipient <a href="/about/"
+      >Tom Masterson</a
+    >. Our Postoley Dance Ensemble offers a strong focus on Ukrainian culture
+    through performances and workshops for schools, festivals, and events.
+    Classes are open to all experience levels—no partner needed.
+  </p>
+  <section class="red">
+    <h2>Introduction to Ballroom Dance</h2>
+    <p>
+      An introduction to the smooth Foxtrot, upbeat Swing, graceful Waltz and
+      seductive Tango. No experience needed. Singles welcome. You do not need to
+      bring a partner. Emphasis on leading, following, and communicating with a
+      partner.
+    </p>
+    <div>
+      <div>When?</div>
+      <div>Sundays, 6:30PM - 8PM</div>
+    </div>
+    <div>
+      $105/couple, $55/person for entire 4-week class. Registration deadline:
+      Friday, Jan 15
+    </div>
+  </section>
+
+  <HorizontalRule />
+</Base>
+
+<style>
+  h2 {
+    margin-top: 1em;
+  }
+</style>

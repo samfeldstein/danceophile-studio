@@ -26,18 +26,30 @@ main {
   padding: 0 0.5rem;
 }
 
+h1 {
+  margin-top: 4rem;
+  color: var(--color-3);
+  font-size: calc(2rem + 4vw);
+}
+
 h1,
 h2 {
+  font-family: var(--font-3);
+}
+
+h1,
+h2,
+.logo {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #555;
+  text-align: center;
 }
 
 h2 {
-  font-family: var(--font-3);
   font-size: calc(1rem + 5vw);
   margin-top: 0;
   color: inherit;
-  text-align: center;
+  font-variant: small-caps;
 }
 
 p {
@@ -62,3 +74,13 @@ a:focus {
 picture {
   filter: drop-shadow(0px 2px 2px #4e4e4e);
 }
+
+.blue,
+  .blue a {
+    color: var(--color-3);
+  }
+
+  .red,
+  .red a {
+    color: var(--color-2);
+  }

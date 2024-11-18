@@ -7,22 +7,55 @@ import Social from "./Social.astro";
   <a class="logo" href="/">Danceophile<br />Studio</a>
 
   <Social />
+  <small>
+    <div class="email phone">
+      <a href="mailto:masterst@colorado.edu">masterst@colorado.edu</a>
+      <a href="tel:+13034996363">(303) 499-6363</a>
+    </div>
+    <a
+      class="address"
+      href="https://maps.app.goo.gl/7fttA6CCH5VmFk1S9"
+      target="_blank"
+    >
+      <div>Postoley</div>
+      <div>250 31st St</div>
+      <div>Boulder, CO 80305</div>
+    </a>
+  </small>
   <Copyright />
-
-  <style>
-    footer {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: calc(2rem + 2vw);
-      text-decoration: none;
-      filter: drop-shadow(0px 1px 1px #717171);
-      color: var(--color-3);
-    }
-  </style>
 </footer>
+
+<style>
+  footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: calc(2rem + 2vw);
+    text-decoration: none;
+    color: var(--color-3);
+  }
+
+  small {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  small a {
+    font-family: var(--font-5);
+    display: block;
+    text-align: left;
+    padding: 0.25rem 0;
+  }
+
+  small a.address {
+    text-align: right;
+  }
+</style>
