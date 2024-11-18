@@ -7,8 +7,8 @@ html {
   @media (max-width: 500px) {
     background-color: var(--color-2);
   }
-  
-  
+
+
 }
 
 body {
@@ -26,13 +26,18 @@ main {
   padding: 0 0.5rem;
 }
 
+h1,
+h2 {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #555;
+}
+
 h2 {
   font-family: var(--font-3);
   font-size: calc(1rem + 5vw);
   margin-top: 0;
   color: inherit;
   text-align: center;
-  filter: drop-shadow(0px 1px 1px #717171);
 }
 
 p {
