@@ -53,6 +53,13 @@ h2 {
   font-variant: small-caps;
 }
 
+h3 {
+  font-family: 'Tinos Bold';
+  font-variant: small-caps;
+  text-align: center;
+  margin-top: 4rem;
+}
+
 p {
   font-family: var(--font-5);
   text-align: justify;
@@ -84,4 +91,9 @@ picture {
 .red h2,
 .red a {
   color: var(--color-2);
+}
+
+.more {
+  display: block;
+  text-align: center;
 }
