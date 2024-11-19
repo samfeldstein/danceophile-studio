@@ -16,6 +16,8 @@ body {
   max-width: 60rem;
   margin: 0 auto;
   font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -24,6 +26,7 @@ header {
 
 main {
   padding: 0 0.5rem;
+  flex: 1;
 }
 
 h1 {

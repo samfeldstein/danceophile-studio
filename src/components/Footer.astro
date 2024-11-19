@@ -8,10 +8,6 @@ import Social from "./Social.astro";
 
   <Social />
   <small>
-    <div class="email phone">
-      <a href="mailto:masterst@colorado.edu">masterst@colorado.edu</a>
-      <a href="tel:+13034996363">(303) 499-6363</a>
-    </div>
     <a
       class="address"
       href="https://maps.app.goo.gl/7fttA6CCH5VmFk1S9"
@@ -21,6 +17,10 @@ import Social from "./Social.astro";
       <div>250 31st St</div>
       <div>Boulder, CO 80305</div>
     </a>
+    <div class="email phone">
+      <a href="mailto:masterst@colorado.edu">masterst@colorado.edu</a>
+      <a href="tel:+13034996363">(303) 499-6363</a>
+    </div>
   </small>
   <Copyright />
 </footer>
@@ -51,11 +51,11 @@ import Social from "./Social.astro";
   small a {
     font-family: var(--font-5);
     display: block;
-    text-align: left;
     padding: 0.25rem 0;
+    text-align: left;
   }
 
-  small a.address {
+  .email.phone a {
     text-align: right;
   }
 </style>
