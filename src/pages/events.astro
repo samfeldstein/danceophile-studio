@@ -1,0 +1,90 @@
+---
+import Base from "../layouts/Base.astro";
+import HorizontalRule from "../components/HorizontalRule.astro";
+import { Picture } from "astro:assets";
+import cover from "/src/images/events-cover.jpg";
+import { cottonwood } from "../../events.mjs";
+---
+
+<Base title="Dance Lessons">
+  <Picture
+    src={cover}
+    formats={["avif", "webp", "jpeg"]}
+    alt="A group of Ukrainian folk dancers performing on a stage."
+  />
+  <h1>Events</h1>
+  <p class="intro">
+    Danceophile Studio offers lessons in ballroom, swing, folk, contra, and
+    country dance, led by Colorado Legends of Dance recipient <a
+      href="/tom-masterson/">Tom Masterson</a
+    >. <strong
+      >Classes are open to all experience levels. No partner needed.</strong
+    >
+  </p>
+
+  <HorizontalRule />
+
+  <section class="blue">
+    <h2>Dancing on Cottonwood Square</h2>
+    <p>
+      Come dance with us under the stars on <a
+        href="https://maps.app.goo.gl/X6xReK4ws5zwQxqQA">Cottonwood Square</a
+      > in Niwot. Dances include folk, salsa, swing, ballroom, and more. <strong
+        >Beginners are always welcome. No partner needed.</strong
+      >
+    </p>
+
+    <section class="cottonwood">
+      <h3>Summer {cottonwood[0].year} Schedule</h3>
+      <ul>
+        {
+          cottonwood.map((data) =>
+            data.events.map((event) => (
+              <li>
+                <span class="date">{event.date}:</span>
+                <span class="dance">{event.dance}</span>
+              </li>
+            )),
+          )
+        }
+      </ul>
+    </section>
+
+    <p>
+      For more information, <a href="mailto:masterst@colorado.edu">email Tom</a>
+      or give him a call at <a href="tel:+13034996363">(303) 499-6363</a>.
+    </p>
+  </section>
+
+  <HorizontalRule />
+</Base>
+
+<style>
+  .intro,
+  section.cottonwood {
+    padding: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    font-variant: small-caps;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 25rem;
+    margin: 0 auto;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+</style>
