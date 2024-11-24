@@ -1,10 +1,11 @@
 ---
 import Copyright from "./Copyright.astro";
 import Social from "./Social.astro";
+import Logo from "./Logo.astro";
 ---
 
 <footer>
-  <a class="logo" href="/">Danceophile<br />Studio</a>
+  <Logo class="logo" />
 
   <Social />
   <small>
@@ -34,12 +35,6 @@ import Social from "./Social.astro";
     align-items: center;
   }
 
-  .logo {
-    font-size: calc(2rem + 3vw);
-    text-decoration: none;
-    color: var(--color-3);
-  }
-
   small {
     display: flex;
     justify-content: space-around;
@@ -57,5 +52,9 @@ import Social from "./Social.astro";
 
   .email.phone a {
     text-align: right;
+  }
+
+  .logo {
+    font-size: calc(3rem);
   }
 </style>

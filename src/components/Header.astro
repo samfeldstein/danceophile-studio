@@ -4,9 +4,7 @@ import Nav from "./Nav.astro";
 ---
 
 <header>
-  <div>
-    <Logo />
-  </div>
+  <Logo class="logo" />
 </header>
 <!-- This is outside the header because if it's inside sticky stops working. -->
 <Nav />
@@ -16,5 +14,9 @@ import Nav from "./Nav.astro";
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
+  }
+
+  .logo {
+    font-size: 5rem;
   }
 </style>

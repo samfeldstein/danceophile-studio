@@ -1,12 +1,14 @@
 ---
 import Base from "../layouts/Base.astro";
 import HorizontalRule from "../components/HorizontalRule.astro";
+// Images
 import { Picture } from "astro:assets";
 import cover from "/src/images/events-cover.jpg";
+// Data
 import { cottonwood } from "../../events.mjs";
 ---
 
-<Base title="Dance Lessons">
+<Base title="Events">
   <Picture
     src={cover}
     formats={["avif", "webp", "jpeg"]}
@@ -27,21 +29,50 @@ import { cottonwood } from "../../events.mjs";
   <section class="blue">
     <h2>Dancing on Cottonwood Square</h2>
     <p>
-      Come dance with us under the stars on <a
+      Join us on summer Friday nights for dancing under the stars on <a
         href="https://maps.app.goo.gl/X6xReK4ws5zwQxqQA">Cottonwood Square</a
-      > in Niwot. Dances include folk, salsa, swing, ballroom, and more. <strong
-        >Beginners are always welcome. No partner needed.</strong
-      >
+      > in Niwot. Dances include folk, salsa, swing, ballroom, and more.
     </p>
 
-    <section class="cottonwood">
+    <p>
+      Classes begin at 7pm and dancing goes till 9:45pm. <strong
+        >Beginners are always welcome. No partner needed.</strong>
+    </p>
+
+    <p>
+      For more information, <a href="mailto:masterst@colorado.edu">email Tom</a>
+      or give him a call at <a href="tel:+13034996363">(303) 499-6363</a>.
+    </p>
+
+    <section class="details">
+      <h3 class="vis-hid">Details</h3>
+      <div>
+        <h4>Time</h4>
+        <div>Class begins at 7pm. Dancing goes till 9:45pm.</div>
+      </div>
+      <div>
+        <h4>Place</h4>
+        <div>
+          <a href="https://maps.app.goo.gl/X6xReK4ws5zwQxqQA" target="_blank"
+            >Cottonwood Square</a
+          > in Niwot.
+        </div>
+      </div>
+      <div>
+        <h4>Cost</h4>
+        <div>FREE</div>
+      </div>
+    </section>
+
+    <section class="schedule">
       <h3>Summer {cottonwood[0].year} Schedule</h3>
       <ul>
         {
           cottonwood.map((data) =>
             data.events.map((event) => (
               <li>
-                <span class="date">{event.date}:</span>
+                <span class="date">{event.date}</span>
+                <span class="dots" />
                 <span class="dance">{event.dance}</span>
               </li>
             )),
@@ -49,11 +80,6 @@ import { cottonwood } from "../../events.mjs";
         }
       </ul>
     </section>
-
-    <p>
-      For more information, <a href="mailto:masterst@colorado.edu">email Tom</a>
-      or give him a call at <a href="tel:+13034996363">(303) 499-6363</a>.
-    </p>
   </section>
 
   <HorizontalRule />
@@ -61,12 +87,26 @@ import { cottonwood } from "../../events.mjs";
 
 <style>
   .intro,
-  section.cottonwood {
+  section.schedule,
+  .details {
     padding: 1rem;
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
     font-variant: small-caps;
+  }
+
+  .details {
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .title {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
 
   ul {
@@ -77,14 +117,36 @@ import { cottonwood } from "../../events.mjs";
     justify-content: center;
     max-width: 25rem;
     margin: 0 auto;
+    gap: 1rem;
   }
 
   li {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    gap: 0.25rem;
   }
 
   h3 {
     margin-top: 0;
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .dots {
+    flex-grow: 1;
+    border-bottom-style: dotted;
+    border-bottom-width: 2px;
+    border-bottom-color: #000;
+  }
+
+  .vis-hid {
+    position: absolute;
+    translate: -1000%;
   }
 </style>

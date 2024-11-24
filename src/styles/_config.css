@@ -1,7 +1,7 @@
 :root {
   --color-1: #FFF2E8;
-  --color-2: #C70002;
-  --color-3: #006EE7;
+  --color-2: #b40002;
+  --color-3: #0057b7;
   --color-4: #212121;
   --color-5: #FFDD00;
   --color-6: #0057b7;
@@ -11,4 +11,5 @@
   --font-3: "Ostrovsky";
   --font-4: "Lissain";
   --font-5: "Tinos";
+  --font-5-bold: "Tinos Bold";
 }

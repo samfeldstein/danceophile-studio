@@ -1,29 +1,33 @@
-<div class="container">
-  <a class="logo" href="/">Danceophile<br />Studio</a>
-</div>
+---
+const { class: className, ...rest } = Astro.props;
+---
+
+<a class={className} {...rest} href="/">
+  <span class="dropcap">Danceophile</span>
+  <span class="dropcap studio">Studio</span>
+</a>
 
 <style>
-  .container {
+  a {
+    /* font-size: calc(2rem + 4vw); */
+    text-decoration: none;
+    color: var(--color-2);
+    font-family: LevType Hryvnia;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
   }
 
-  .logo {
-    font-family: var(--font-1);
-    font-size: calc(2rem + 4vw);
-    text-decoration: none;
-    text-align: center;
-    color: var(--color-2);
+  span {
+    display: block;
   }
 
-  .with {
-    font-family: var(--font-2);
-    font-size: 1rem;
+  .studio {
+    margin-top: -1rem;
   }
 
-  .tom {
-    font-family: var(--font-3);
-    font-size: 1rem;
+  .dropcap::first-letter {
+    font-size: 1.75em;
+    font-family: Grusskarten Gotisch;
   }
 </style>

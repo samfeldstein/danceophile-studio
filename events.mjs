@@ -8,6 +8,10 @@ export const cottonwood = [{
     dance: "Salsa"
   },
   {
+    date: "July 8",
+    dance: "Ballroom"
+  },
+  {
     date: "July 15",
     dance: "Cuban Salsa"
   }]

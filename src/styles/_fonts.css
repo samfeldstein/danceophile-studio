@@ -48,6 +48,7 @@
   font-display: swap;
 }
 
-strong, b {
+strong,
+b {
   font-family: "Tinos Bold";
 }
