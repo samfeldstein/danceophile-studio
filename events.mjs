@@ -2,7 +2,7 @@ export const events = [{
   cottonwood: [{
     year: 2025,
     events: [{
-      date: "2025-06-24",
+      date: "June 24",
       dance: "Salsa"
     }, {
       date: "July 1",
