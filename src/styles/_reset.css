@@ -45,3 +45,7 @@ textarea,
 select {
   font: inherit;
 }
+
+summary {
+  cursor: pointer;
+}

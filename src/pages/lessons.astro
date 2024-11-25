@@ -23,30 +23,42 @@ import cover from "/src/images/lessons-cover.jpg";
 
   <HorizontalRule />
 
-  <section class="red">
-    <h2>Introduction to Ballroom Dance</h2>
+  <section>
+    <h2 id="ballroom-dance-lessons">Introduction to Ballroom Dance</h2>
     <p>
       A four-week introduction to the smooth Foxtrot, upbeat Swing, graceful
       Waltz, and seductive Tango with an emphasis on leading, following, and
       communicating with a partner.
     </p>
 
-    <p>
-      Classes are held at <a
-        class="address"
-        href="https://maps.app.goo.gl/7fttA6CCH5VmFk1S9"
-        target="_blank">Danceophile Studio</a
-      > on <strong>Sundays from 6:30pm - 8pm</strong>.
-    </p>
+    <p><strong>No experience or partner needed.</strong></p>
 
-    <p>
-      Rates are $105 for couples and $55 for singles. <em
-        ><strong>Rates cover the entire four-week class.</strong></em
-      >
-    </p>
+    <section class="details">
+      <h3 class="vis-hid">Details</h3>
+      <div>
+        <h4>Time</h4>
+        <div>Sundays, 6:30pm - 8pm.</div>
+      </div>
+      <div>
+        <h4>Place</h4>
+        <div>
+          <a
+            class="address"
+            href="https://maps.app.goo.gl/7fttA6CCH5VmFk1S9"
+            target="_blank">Danceophile Studio</a
+          >
+        </div>
+      </div>
+      <div>
+        <h4>Cost</h4>
+        <div>
+          $105 for couples and $55 for singles. <em
+            ><strong>Rates cover the entire four-week class.</strong></em
+          >
+        </div>
+      </div>
+    </section>
   </section>
-
-  <p><strong>No experience or partner needed.</strong></p>
 
   <HorizontalRule />
 
@@ -70,32 +82,6 @@ import cover from "/src/images/lessons-cover.jpg";
   </section>
 
   <HorizontalRule />
-
-  <section class="red">
-    <h2>Folk Dancing in the Mountains</h2>
-    <p>
-      Join us at the <a
-        class="address"
-        href="https://maps.app.goo.gl/AiY4UTiUy9nm1upr5"
-        target="_blank">Nederland Community Center</a
-      > to meet wonderful folks, eat great snacks, and dance fun dances from around
-      the world.
-    </p>
-
-    <p>
-      Dancing happens on <strong>Mondays from 7pm - 9:15pm</strong>. Carpool
-      leaves at 6:15 from <a
-        href="https://maps.app.goo.gl/9fPoJrqXurqbcnh4A"
-        target="_blank">Danceophile Studio</a
-      > or 6:30 from the <a
-        href="https://maps.app.goo.gl/TTebo7TbQ5mVFcwy5"
-        target="_blank">Justice Center</a
-      > parking lot at 6th & Canyon.
-    </p>
-    <p><strong>No experience or partner needed.</strong></p>
-  </section>
-
-  <HorizontalRule />
 </Base>
 
 <style>
@@ -103,7 +89,19 @@ import cover from "/src/images/lessons-cover.jpg";
     margin-top: 1em;
   }
 
-  .intro {
+  h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .intro,
+  .details {
     padding: 1rem;
     font-variant: small-caps;
     border-style: solid;
@@ -112,5 +110,18 @@ import cover from "/src/images/lessons-cover.jpg";
     padding: 1rem;
     font-family: var(--font-4);
     font-variant: small-caps;
+  }
+
+  .details {
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .vis-hid {
+    position: absolute;
+    translate: -1000%;
   }
 </style>
