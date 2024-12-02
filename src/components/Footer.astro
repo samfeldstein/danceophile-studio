@@ -23,38 +23,39 @@ import Logo from "./Logo.astro";
       <a href="tel:+13034996363">(303) 499-6363</a>
     </div>
   </small>
+
   <Copyright />
+
+  <style>
+    footer {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    small {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      padding: 0 0.5rem;
+    }
+
+    small a {
+      font-family: var(--font-4);
+      display: block;
+      padding: 0.25rem 0;
+      text-align: left;
+    }
+
+    .email.phone a {
+      text-align: right;
+    }
+
+    .logo {
+      font-size: calc(3rem);
+    }
+  </style>
 </footer>
-
-<style>
-  footer {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-  }
-
-  small {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: 0 0.5rem;
-  }
-
-  small a {
-    font-family: var(--font-4);
-    display: block;
-    padding: 0.25rem 0;
-    text-align: left;
-  }
-
-  .email.phone a {
-    text-align: right;
-  }
-
-  .logo {
-    font-size: calc(3rem);
-  }
-</style>

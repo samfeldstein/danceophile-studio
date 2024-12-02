@@ -24,8 +24,14 @@ import Social from "./Social.astro";
           <a href="mailto:masterst@colorado.edu">masterst@colorado.edu</a>
           <a href="tel:+13034996363">(303) 499-6363</a>
         </div>
+        <Social />
       </div>
-      <Social />
+      <div class="resources">
+        <div class="title">Resources</div>
+        <div>
+          <a href="/folk-dance-database.xls">Folk Dance Database</a>
+        </div>
+      </div>
     </div>
   </div>
 </details>
@@ -79,7 +85,7 @@ import Social from "./Social.astro";
 
   nav,
   .contact,
-  .follow {
+  .resources {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -91,6 +97,10 @@ import Social from "./Social.astro";
     border-radius: 2px;
     filter: drop-shadow(0px 1px 1px #393939);
     background-color: var(--background-color);
+  }
+
+  .contact {
+    align-items: center;
   }
 
   a {
