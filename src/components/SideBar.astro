@@ -1,4 +1,10 @@
-<aside>This is the sidebar.</aside>
+---
+import Nav from "./Nav.astro";
+---
+
+<aside>
+  <Nav />
+</aside>
 
 <style>
   aside {
@@ -8,5 +14,31 @@
     @media screen and (max-width: 1000px) {
       display: none;
     }
+  }
+</style>
+
+<style is:global>
+  aside {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-right-style: solid;
+    border-right-width: 1px;
+    text-align: center;
+  }
+
+  aside nav,
+  aside .contact {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+
+  .links, .contact {
+    padding-bottom: 2rem;
+  }
+
+  .title {
+    font-family: var(--font-1);
+    margin-bottom: 1rem;
   }
 </style>

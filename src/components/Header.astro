@@ -1,18 +1,27 @@
 ---
 import Logo from "./Logo.astro";
 import MobileMenu from "./MobileMenu.astro";
+import HorizontalRule from "./HorizontalRule.astro";
 ---
 
 <header>
   <Logo class="logo" />
+  <div class="hr">
+    <HorizontalRule />
+  </div>
 </header>
 <!-- This is outside the header because if it's inside sticky stops working. -->
+
 <MobileMenu />
 
 <style>
   header {
     margin-bottom: 2rem;
     grid-area: header;
+  }
+
+  .hr {
+    padding: 0 1rem;
   }
 
   .logo {
