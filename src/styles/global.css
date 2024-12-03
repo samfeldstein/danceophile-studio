@@ -29,7 +29,7 @@ body {
 }
 
 main {
-  padding: 0 1rem;
+  padding-right: 2rem;
   /* Push footer to bottom */
   flex: 1;
   grid-area: main;

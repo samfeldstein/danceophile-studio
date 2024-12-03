@@ -3,42 +3,45 @@ import Nav from "./Nav.astro";
 ---
 
 <aside>
-  <Nav />
+  <div class="container">
+    <Nav />
+  </div>
 </aside>
 
 <style>
   aside {
     grid-area: sidebar;
-    padding: 0 1rem;
+    margin-right: 2rem;
+    border-right-style: solid;
+    border-right-width: 1px;
+    padding: 0 2rem;
+    text-align: center;
 
     @media screen and (max-width: 1000px) {
       display: none;
     }
   }
-</style>
 
-<style is:global>
-  aside {
+  .container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    border-right-style: solid;
-    border-right-width: 1px;
-    text-align: center;
+    position: sticky;
+    top: 1rem;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    filter: drop-shadow(0px 1px 1px black);
   }
+</style>
 
+<style is:global>
   aside nav,
-  aside .contact {
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
+  aside .contact,
+  aside .resources {
+    padding: 1rem;
   }
 
-  .links, .contact {
-    padding-bottom: 2rem;
-  }
-
-  .title {
-    font-family: var(--font-1);
-    margin-bottom: 1rem;
+  aside .links {
+    justify-content: space-between;
   }
 </style>
