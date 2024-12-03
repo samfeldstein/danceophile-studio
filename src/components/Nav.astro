@@ -2,86 +2,34 @@
 import Social from "./Social.astro";
 ---
 
-<details>
-  <summary>Menu</summary>
-  <div class="parent">
-    <div class="content">
-      <nav>
-        <div class="title">Navigation</div>
+<nav>
+  <div class="title">Navigation</div>
 
-        <div class="links">
-          <a href="/">Home</a>
-          <a href="/about/">About</a>
-          <a href="/lessons/">Lessons</a>
-          <a href="/events/">Events</a>
-          <a href="/postoley/">Postoley</a>
-        </div>
-      </nav>
-
-      <div class="contact">
-        <div class="title">Contact</div>
-        <div class="email phone">
-          <a href="mailto:masterst@colorado.edu">masterst@colorado.edu</a>
-          <a href="tel:+13034996363">(303) 499-6363</a>
-        </div>
-        <Social />
-      </div>
-      <div class="resources">
-        <div class="title">Resources</div>
-        <div>
-          <a href="/folk-dance-database.xls">Folk Dance Database</a>
-        </div>
-      </div>
-    </div>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/lessons/">Lessons</a>
+    <a href="/events/">Events</a>
+    <a href="/postoley/">Postoley</a>
   </div>
-</details>
+</nav>
+
+<div class="contact">
+  <div class="title">Contact</div>
+  <div class="email phone">
+    <a href="mailto:masterst@colorado.edu">masterst@colorado.edu</a>
+    <a href="tel:+13034996363">(303) 499-6363</a>
+  </div>
+</div>
+<div class="resources">
+  <div class="title">Resources</div>
+  <div>
+    <a href="/folk-dance-database.xls">Folk Dance Database</a>
+  </div>
+</div>
+<Social />
 
 <style>
-  .parent {
-    display: flex;
-    justify-content: center;
-  }
-
-  details {
-    font-family: var(--font-1);
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
-
-  .content {
-    background-color: var(--background-color);
-    padding: 1rem;
-    gap: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 2px;
-    margin: 0 0.75rem;
-    margin-top: -3px;
-    color: var(--color-4);
-    filter: drop-shadow(0px 1px 1px black);
-    position: absolute;
-  }
-
-  summary {
-    filter: drop-shadow(0px 1px 1px black);
-    background-color: var(--color-3);
-    color: var(--background-color);
-    padding: 0.5em 0;
-    margin: 0 0.25rem;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    border-radius: 2px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
 
   nav,
   .contact,

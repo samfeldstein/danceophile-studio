@@ -1,7 +1,7 @@
 @import url("/src/styles/_fonts.css");
 @import url("/src/styles/_reset.css");
 @import url("/src/styles/_config.css");
-@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap');
+@import url("/src/styles/_utilities.css");
 
 html {
   @media (max-width: 500px) {
