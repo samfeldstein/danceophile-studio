@@ -11,21 +11,28 @@ html {
 
 body {
   background-color: var(--background-color);
-  max-width: 60rem;
-  margin: 0 auto;
+  margin: 0;
   /* For flex on main */
   display: flex;
   flex-direction: column;
-}
 
-header {
-  text-align: center;
+  @media screen and (min-width: 1001px) {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+    grid-template-rows: auto 1fr auto;
+    /* Header, main content, footer */
+    grid-template-columns: 300px 1fr;
+  }
 }
 
 main {
-  padding: 0 0.5rem;
+  padding: 0 1rem;
   /* Push footer to bottom */
   flex: 1;
+  grid-area: main;
 }
 
 h1,

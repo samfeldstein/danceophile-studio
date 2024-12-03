@@ -2,9 +2,13 @@
 import Copyright from "./Copyright.astro";
 import Social from "./Social.astro";
 import Logo from "./Logo.astro";
+import HorizontalRule from "./HorizontalRule.astro";
 ---
 
 <footer>
+  <div class="horizontal-rule">
+    <HorizontalRule />
+  </div>
   <Logo class="logo" />
 
   <Social />
@@ -25,37 +29,41 @@ import Logo from "./Logo.astro";
   </small>
 
   <Copyright />
-
-  <style>
-    footer {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    small {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
-      padding: 0 0.5rem;
-    }
-
-    small a {
-      font-family: var(--font-4);
-      display: block;
-      padding: 0.25rem 0;
-      text-align: left;
-    }
-
-    .email.phone a {
-      text-align: right;
-    }
-
-    .logo {
-      font-size: calc(3rem);
-    }
-  </style>
 </footer>
+
+<style>
+  footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    grid-area: footer;
+  }
+
+  small {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  small a {
+    font-family: var(--font-4);
+    display: block;
+    padding: 0.25rem 0;
+    text-align: left;
+  }
+
+  .email.phone a {
+    text-align: right;
+  }
+
+  .horizontal-rule {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: calc(3rem);
+  }
+</style>

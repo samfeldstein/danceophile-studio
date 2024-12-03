@@ -2,10 +2,10 @@
 import Nav from "./Nav.astro";
 ---
 
-<details>
-  <summary class="drop-shadow">Menu</summary>
-  <div class="parent">
-    <div class="content drop-shadow">
+<details class="text-center">
+  <summary class="border drop-shadow">Menu</summary>
+  <div class="parent flex">
+    <div class="content border drop-shadow flex">
       <Nav />
     </div>
   </div>
@@ -14,14 +14,27 @@ import Nav from "./Nav.astro";
 <style>
   details {
     font-family: var(--font-1);
-    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    @media screen and (min-width: 1001px) {
+      display: none;
+    }
+  }
+
+  summary {
+    background-color: var(--color-3);
+    color: var(--background-color);
+    padding: 0.5em 0;
+    margin: 0 0.25rem;
+    border-radius: 2px;
     position: sticky;
     top: 0;
     z-index: 1;
   }
 
   .parent {
-    display: flex;
     justify-content: center;
   }
 
@@ -30,28 +43,10 @@ import Nav from "./Nav.astro";
     background-color: var(--background-color);
     padding: 1rem;
     gap: 2rem;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
     border-radius: 2px;
     margin-top: -3px;
     position: absolute;
-  }
-
-  summary {
-    background-color: var(--color-3);
-    color: var(--background-color);
-    padding: 0.5em 0;
-    margin: 0 0.25rem;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    border-radius: 2px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
   }
 </style>
