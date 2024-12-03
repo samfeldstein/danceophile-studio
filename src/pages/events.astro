@@ -61,7 +61,7 @@ const cottonwood = events[0].cottonwood;
 
   <HorizontalRule />
 
-  <section>
+  <section class="cottonwood">
     <h2 id="cottonwood">Dancing on Cottonwood Square</h2>
     <p>
       Join us on summer Friday nights for dancing under the stars on <a
@@ -110,6 +110,10 @@ const cottonwood = events[0].cottonwood;
         }
       </ul>
     </section>
+    <video controls="controls" preload="metadata">
+      <source src="/videos/cottonwood-dancing.mp4" type="video/mp4" />
+      <source src="/videos/cotton-dancing.webm" type="video/webm" />
+    </video>
   </section>
 
   <HorizontalRule />
@@ -178,7 +182,6 @@ const cottonwood = events[0].cottonwood;
   .details,
   .event {
     text-align: center;
-    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
   }
@@ -190,6 +193,17 @@ const cottonwood = events[0].cottonwood;
   .title {
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
+  }
+
+  section.cottonwood {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  section.cottonwood > * {
+    width: 100%;
   }
 
   ul {
