@@ -16,23 +16,22 @@ body {
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 1001px) {
-    display: grid;
-    grid-template-areas:
-      "header header"
-      "sidebar main"
-      "footer footer";
-    grid-template-rows: auto 1fr auto;
-    /* Header, main content, footer */
-    grid-template-columns: 300px 1fr;
+  @media screen and (min-width: 1200px) {
+    font-size: 1.25rem;
   }
+}
+
+.sidebar.main {
+  grid-area: main;
+  display: flex;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 
 main {
   padding-right: 2rem;
   /* Push footer to bottom */
   flex: 1;
-  grid-area: main;
 }
 
 h1,
@@ -87,7 +86,11 @@ a:focus,
 }
 
 picture {
-  filter: drop-shadow(0px 2px 2px #4e4e4e);
+  filter: drop-shadow(0px 1px 1px black);
+}
+
+img {
+  border-radius: 5px;
 }
 
 .blue h2,

@@ -16,10 +16,12 @@ const { title, description } = Astro.props;
   <body>
     <Skiplink />
     <Header />
-    <SideBar />
-    <main id="main-content">
-      <slot />
-    </main>
+    <div class="sidebar main">
+      <SideBar />
+      <main id="main-content">
+        <slot />
+      </main>
+    </div>
     <Footer />
   </body>
 </html>

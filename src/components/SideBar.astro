@@ -11,13 +11,15 @@ import Nav from "./Nav.astro";
 <style>
   aside {
     grid-area: sidebar;
-    margin-right: 2rem;
+    max-width: 25rem;
+    margin-right: 4rem;
     border-right-style: solid;
     border-right-width: 1px;
-    padding: 0 2rem;
+    padding-left: 2rem;
+    padding-right: 4rem;
     text-align: center;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1199px) {
       display: none;
     }
   }
@@ -29,18 +31,13 @@ import Nav from "./Nav.astro";
     position: sticky;
     top: 1rem;
     border-radius: 5px;
+    padding: 1rem;
     background-color: var(--background-color);
     filter: drop-shadow(0px 1px 1px black);
   }
 </style>
 
 <style is:global>
-  aside nav,
-  aside .contact,
-  aside .resources {
-    padding: 1rem;
-  }
-
   aside .links {
     justify-content: space-between;
   }
