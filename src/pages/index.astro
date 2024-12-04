@@ -1,21 +1,17 @@
 ---
 import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
-import MobileMenu from "../components/MobileMenu.astro";
 import HorizontalRule from "../components/HorizontalRule.astro";
 import Logo from "../components/Logo.astro";
 import { Picture } from "astro:assets";
-import cover from "/src/images/danceophile-cover.jpg";
-import tom from "/src/images/tom.jpg";
+import cover from "/src/images/flyout.jpg";
+import tom from "/src/images/tom-laurie.jpg";
 import dancers from "/src/images/dancers-silhouette.avif";
-import postoley from "/src/images/postoley.jpg";
+import postoley from "/src/images/tom-greg-lift.jpg";
 import MainContent from "../components/MainContent.astro";
 ---
 
 <Base title="Home">
-  <Header>
-    <Logo class="logo" />
-  </Header>
   <MainContent>
     <Picture
       class:list={"cover"}
@@ -45,6 +41,7 @@ import MainContent from "../components/MainContent.astro";
       <h2>Meet Tom Masterson</h2>
       <div class="content">
         <Picture
+          class:list={"tom"}
           src={tom}
           formats={["avif", "webp", "jpeg"]}
           alt="A passport photo of Tom Masterson."

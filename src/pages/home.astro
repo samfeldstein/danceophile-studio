@@ -1,0 +1,112 @@
+---
+// Components
+import Head from "../components/Head.astro";
+import Skiplink from "../components/Skiplink.astro";
+import Copyright from "../components/Copyright.astro";
+
+// Images
+import { Picture } from "astro:assets";
+import flyout from "/src/images/flyout.jpg";
+import lift from "/src/images/tom-greg-lift.jpg";
+import tomLaurie from "/src/images/tom-laurie.jpg";
+import niwot from "/src/images/niwot.jpg";
+---
+
+<html lang="en">
+  <Head title="Home" />
+  <body>
+    <Skiplink />
+    <main id="main-content">
+      <div class="postodance">
+        <section id="postoley">
+          <h2 class="postoley">
+            <div>
+              <span class="drop-cap">Postoley</span>
+              <span class="drop-cap">Dance</span>
+            </div>
+            <span class="drop-cap">Ensemble</span>
+          </h2>
+
+          <Picture
+            src={flyout}
+            formats={["avif", "webp", "jpeg"]}
+            alt="Tom Masterson and a dance partner performing a Ukrainian folk dance flyout."
+          />
+          <Picture
+            src={lift}
+            formats={["avif", "webp", "jpeg"]}
+            alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
+          />
+        </section>
+
+        <section id="danceophile">
+          <h2 class="danceophile">
+            <div class="drop-cap">Danceophile</div>
+            <div class="drop-cap">Studio</div>
+          </h2>
+          <Picture
+            src={tomLaurie}
+            formats={["avif", "webp", "jpeg"]}
+            alt="Tom Masterson and a dance partner performing a waltz move."
+          />
+          <Picture
+            src={niwot}
+            formats={["avif", "webp", "jpeg"]}
+            alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
+          />
+        </section>
+      </div>
+    </main>
+    <footer>
+      <Copyright />
+    </footer>
+  </body>
+</html>
+
+<style>
+  main {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  section {
+    flex: 1;
+  }
+
+  h2 {
+    /* text-wrap: nowrap; */
+    font-family: Ostrovsky;
+    font-weight: 100;
+    font-size: 4rem;
+    font-size: calc(1.5rem + 1.75vw);
+    font-variant: unset;
+
+    /* @media screen and (min-width: 1000px) {
+      font-size: 2rem;
+    } */
+  }
+
+  h2.danceophile {
+    color: var(--color-3);
+  }
+
+  .drop-cap {
+    -webkit-text-stroke: 0.005em black;
+  }
+
+  .drop-cap::first-letter {
+    font-size: 1.75em;
+    font-family: "Grusskarten";
+    font-weight: 100;
+  }
+
+  span.drop-cap {
+    display: inline-block;
+  }
+
+  .postodance {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+</style>
