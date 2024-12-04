@@ -42,7 +42,11 @@ h2 {
 h1 {
   font-family: Showboat;
   font-weight: 100;
-  font-size: calc(1rem + 5vw);
+  font-size: calc(2rem + 3vw);
+
+  @media screen and (min-width: 850px) {
+    font-size: calc(2rem + 5vw);
+  }
 }
 
 h2 {
@@ -89,6 +93,7 @@ img {
 .more {
   display: block;
   text-align: center;
+  margin: 1rem 0;
 }
 
 ::selection {
