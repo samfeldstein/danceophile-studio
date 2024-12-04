@@ -17,8 +17,8 @@ const cottonwood = events[0].cottonwood;
   </Header>
   <MainContent>
     <Picture
-    class:list={"cover"}  
-    src={cover}
+      class:list={"cover"}
+      src={cover}
       formats={["avif", "webp", "jpeg"]}
       alt="A group of Ukrainian folk dancers performing on a stage."
     />
@@ -111,7 +111,7 @@ const cottonwood = events[0].cottonwood;
           }
         </ul>
       </section>
-      <video controls="controls" preload="auto">
+      <video controls="controls" preload="metadata">
         <source src="/videos/cottonwood.mp4" type="video/mp4" />
         <source src="/videos/cottonwood.webm" type="video/webm" />
       </video>
