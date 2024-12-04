@@ -9,7 +9,7 @@ import { Picture } from "astro:assets";
 import flyout from "/src/images/flyout.jpg";
 import lift from "/src/images/tom-greg-lift.jpg";
 import tomLaurie from "/src/images/tom-laurie.jpg";
-import niwot from "/src/images/niwot.jpg";
+import niwot from "/src/images/cottonwood.jpg";
 ---
 
 <html lang="en">
@@ -19,41 +19,46 @@ import niwot from "/src/images/niwot.jpg";
     <main id="main-content">
       <div class="postodance">
         <section id="postoley">
-          <h2 class="postoley">
-            <div>
-              <span class="drop-cap">Postoley</span>
-              <span class="drop-cap">Dance</span>
-            </div>
-            <span class="drop-cap">Ensemble</span>
-          </h2>
+          <a class="section" href="/postoley/">
+            <h2 class="postoley">
+              <div>
+                <span class="drop-cap">Postoley</span>
+                <span class="drop-cap">Dance</span>
+              </div>
+              <span class="drop-cap">Ensemble</span>
+            </h2>
 
-          <Picture
-            src={flyout}
-            formats={["avif", "webp", "jpeg"]}
-            alt="Tom Masterson and a dance partner performing a Ukrainian folk dance flyout."
-          />
-          <Picture
-            src={lift}
-            formats={["avif", "webp", "jpeg"]}
-            alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
-          />
+            <Picture
+              src={flyout}
+              formats={["avif", "webp", "jpeg"]}
+              alt="Tom Masterson and a dance partner performing a Ukrainian folk dance flyout."
+            />
+            <Picture
+              src={lift}
+              formats={["avif", "webp", "jpeg"]}
+              alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
+            />
+          </a>
         </section>
 
         <section id="danceophile">
-          <h2 class="danceophile">
-            <div class="drop-cap">Danceophile</div>
-            <div class="drop-cap">Studio</div>
-          </h2>
-          <Picture
-            src={tomLaurie}
-            formats={["avif", "webp", "jpeg"]}
-            alt="Tom Masterson and a dance partner performing a waltz move."
-          />
-          <Picture
-            src={niwot}
-            formats={["avif", "webp", "jpeg"]}
-            alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
-          />
+          <a class="section" href="/danceophile">
+            <h2 class="danceophile">
+              <div class="drop-cap">Danceophile</div>
+              <div class="drop-cap">Studio</div>
+            </h2>
+            <Picture
+              src={tomLaurie}
+              formats={["avif", "webp", "jpeg"]}
+              alt="Tom Masterson and a dance partner performing a waltz move."
+            />
+            <Picture
+              src={niwot}
+              formats={["avif", "webp", "jpeg"]}
+              alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
+            />
+          </a>
+          
         </section>
       </div>
     </main>
@@ -88,6 +93,10 @@ import niwot from "/src/images/niwot.jpg";
 
   h2.danceophile {
     color: var(--color-3);
+  }
+
+  a.section {
+    text-decoration: none;
   }
 
   .drop-cap {
