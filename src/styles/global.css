@@ -14,7 +14,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 850px) {
     font-size: 1.25rem;
   }
 }
@@ -46,7 +46,6 @@ h1 {
 }
 
 h2 {
-  margin-top: 0;
   font-family: var(--font-3);
   font-size: calc(2rem + 3vw);
   font-variant: small-caps;

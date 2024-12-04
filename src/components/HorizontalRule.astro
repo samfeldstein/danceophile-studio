@@ -3,7 +3,7 @@
 <style>
   hr {
     border: none;
-    margin: 2rem 0;
+    margin: 4rem 0;
     height: 3px;
     background: var(--color-2);
     background: -moz-linear-gradient(
@@ -18,5 +18,9 @@
     );
     background: linear-gradient(90deg, var(--color-2) 0%, var(--color-3) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b40002", endColorstr="#0057b7", GradientType=1);
+
+    @media screen and (max-width: 849px) {
+      margin: 2rem 0;
+    }
   }
 </style>
