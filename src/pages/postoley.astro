@@ -13,7 +13,8 @@ import Header from "../components/Header.astro";
   </Header>
   <MainContent>
     <Picture
-      src={cover}
+    class:list={"cover"}  
+    src={cover}
       formats={["avif", "webp", "jpeg"]}
       alt="Two pairs of postoley folk dancers."
     />
@@ -91,7 +92,7 @@ import Header from "../components/Header.astro";
     padding: 1rem;
     border-style: solid;
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: 2px;
   }
 
   .ukraine {
@@ -99,7 +100,7 @@ import Header from "../components/Header.astro";
   }
 
   .flag {
-    border-radius: 5px;
+    border-radius: 2px;
     margin-bottom: 1rem;
     padding: 2rem;
     filter: drop-shadow(0px 1px 1px #000);
@@ -127,7 +128,7 @@ import Header from "../components/Header.astro";
     color: var(--color-2);
     margin: 0;
     padding: 0.5em;
-    border-radius: 4px;
+    border-radius: 2px;
     filter: drop-shadow(0px 1px 1px #000);
   }
 </style>

@@ -3,9 +3,9 @@ import Nav from "./Nav.astro";
 ---
 
 <details class="text-center">
-  <summary class="border drop-shadow">Menu</summary>
+  <summary>Menu</summary>
   <div class="parent flex">
-    <div class="content border drop-shadow flex">
+    <div class="content border flex">
       <Nav />
     </div>
   </div>
@@ -27,11 +27,11 @@ import Nav from "./Nav.astro";
     background-color: var(--color-3);
     color: var(--background-color);
     padding: 0.5em 0;
-    margin: 0 0.25rem;
-    border-radius: 2px;
     position: sticky;
     top: 0;
     z-index: 1;
+    filter: drop-shadow(0px 1px 1px #333);
+    
   }
 
   .parent {

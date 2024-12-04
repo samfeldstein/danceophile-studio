@@ -1,7 +1,9 @@
 ---
 import HorizontalRule from "./HorizontalRule.astro";
+import MobileMenu from "./MobileMenu.astro";
 ---
 
+<MobileMenu />
 <header>
   <slot />
   <div class="hr">
@@ -12,6 +14,7 @@ import HorizontalRule from "./HorizontalRule.astro";
 <style>
   header {
     margin-bottom: 2rem;
+    padding: 0 0.5rem;
     max-width: 75rem;
     margin: 0 auto;
     width: 100%;

@@ -13,7 +13,7 @@ import HorizontalRule from "./HorizontalRule.astro";
 
   <small>
     <a
-      class="address"
+      class="address contact"
       href="https://maps.app.goo.gl/7fttA6CCH5VmFk1S9"
       target="_blank"
     >
@@ -23,8 +23,8 @@ import HorizontalRule from "./HorizontalRule.astro";
     </a>
     <Social />
     <div class="email phone">
-      <a href="mailto:masterst@colorado.edu">masterst@colorado.edu</a>
-      <a href="tel:+13034996363">(303) 499-6363</a>
+      <a class="contact" href="mailto:masterst@colorado.edu">masterst@colorado.edu</a>
+      <a class="contact" href="tel:+13034996363">(303) 499-6363</a>
     </div>
   </small>
 
@@ -41,7 +41,7 @@ import HorizontalRule from "./HorizontalRule.astro";
 
   small {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     margin: 2rem 0;
@@ -52,6 +52,20 @@ import HorizontalRule from "./HorizontalRule.astro";
     display: block;
     padding: 0.25rem 0;
     text-align: left;
+  }
+
+  a.contact {
+    text-decoration: none;
+  }
+
+  a.contact:hover, a.contact:focus {
+    text-decoration: underline;
+  }
+
+  .email.phone {
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
   }
 
   .email.phone a {
@@ -65,12 +79,6 @@ import HorizontalRule from "./HorizontalRule.astro";
   }
 
   .logo {
-    font-size: calc(3rem);
-  }
-</style>
-
-<style is:global>
-  footer .social {
-    padding: 2rem 0;
+    font-size: calc(1rem + 3vw);
   }
 </style>
