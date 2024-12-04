@@ -16,11 +16,10 @@ import MainContent from "../components/MainContent.astro";
   <Header>
     <Logo class="logo" />
   </Header>
-  <MobileMenu />
   <MainContent>
     <Picture
-    class:list={"cover"}  
-    src={cover}
+      class:list={"cover"}
+      src={cover}
       formats={["avif", "webp", "jpeg"]}
       alt="Ukrainian folk dancers performing on a stage."
     />
@@ -178,6 +177,7 @@ import MainContent from "../components/MainContent.astro";
 
   .logo {
     font-size: calc(2rem + 4vw);
+    gap: 0 2rem;
   }
 
   .more {
