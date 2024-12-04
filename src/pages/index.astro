@@ -122,7 +122,7 @@ import MainContent from "../components/MainContent.astro";
   div.intro {
     margin: 1rem 0;
   }
-  
+
   section {
     display: flex;
     flex-direction: column;
@@ -186,6 +186,10 @@ import MainContent from "../components/MainContent.astro";
   .logo {
     font-size: calc(2rem + 4vw);
     gap: 0 2rem;
+
+    @media screen and (max-width: 849px) {
+      margin: 1.25em 0;
+    }
   }
 </style>
 

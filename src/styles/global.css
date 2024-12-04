@@ -43,7 +43,7 @@ h2 {
 h1 {
   font-family: Showboat;
   font-weight: 100;
-  font-size: calc(2rem + 3vw);
+  font-size: calc(1.2rem + 8vw);
 
   @media screen and (min-width: 850px) {
     font-size: calc(2rem + 5vw);
