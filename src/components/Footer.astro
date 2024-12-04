@@ -6,12 +6,11 @@ import HorizontalRule from "./HorizontalRule.astro";
 ---
 
 <footer>
-  <div class="horizontal-rule">
+  <div class="hr">
     <HorizontalRule />
   </div>
   <Logo class="logo" />
 
-  <Social />
   <small>
     <a
       class="address"
@@ -22,6 +21,7 @@ import HorizontalRule from "./HorizontalRule.astro";
       <div>250 31st St</div>
       <div>Boulder, CO 80305</div>
     </a>
+    <Social />
     <div class="email phone">
       <a href="mailto:masterst@colorado.edu">masterst@colorado.edu</a>
       <a href="tel:+13034996363">(303) 499-6363</a>
@@ -36,8 +36,7 @@ import HorizontalRule from "./HorizontalRule.astro";
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    grid-area: footer;
+    align-items: center;
   }
 
   small {
@@ -45,7 +44,7 @@ import HorizontalRule from "./HorizontalRule.astro";
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    padding: 0 0.5rem;
+    margin: 2rem 0;
   }
 
   small a {
@@ -59,11 +58,19 @@ import HorizontalRule from "./HorizontalRule.astro";
     text-align: right;
   }
 
-  .horizontal-rule {
+  .hr {
+    max-width: 75rem;
+    width: 100%;
     padding: 0 1rem;
   }
 
   .logo {
     font-size: calc(3rem);
+  }
+</style>
+
+<style is:global>
+  footer .social {
+    padding: 2rem 0;
   }
 </style>

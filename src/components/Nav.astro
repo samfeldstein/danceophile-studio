@@ -1,13 +1,15 @@
 ---
 import Social from "./Social.astro";
+import Logo from "./Logo.astro";
 ---
 
 <nav>
-  <div class="title">Navigation</div>
+  <!-- <div class="title">Navigation</div> -->
+  <Logo class:list={"logo"}/>
 
   <div class="links">
     <a href="/">Home</a>
-    <a href="/about/">About</a>
+    <a href="/about/">Meet Tom</a>
     <a href="/lessons/">Lessons</a>
     <a href="/events/">Events</a>
     <a href="/postoley/">Postoley</a>
@@ -48,39 +50,30 @@ import Social from "./Social.astro";
   a {
     font-family: var(--font-4);
     font-variant: small-caps;
-    padding: 0 0.5rem;
-    transition:
-      color 0.3s ease,
-      background-color 0.3s ease;
+    padding: 0.5em 1em;
     border-radius: 2px;
-  }
-
-  a:hover,
-  a:focus {
-    color: var(--background-color);
-    background-color: var(--color-2);
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    filter: drop-shadow(0px 2px 2px #4e4e4e);
   }
 
   .links {
     display: flex;
     justify-content: center;
-    gap: 1rem 0;
     flex-wrap: wrap;
   }
 
   .social,
   .email.phone {
     display: flex;
-    gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   .title {
-    font-size: 1.25rem;
     font-family: var(--font-1);
+  }
+
+  .logo {
+    gap: 1rem;
+    color: black;
+    font-size: 1.5rem;
   }
 </style>

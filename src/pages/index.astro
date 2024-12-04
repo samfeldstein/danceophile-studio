@@ -1,22 +1,29 @@
 ---
 import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import MobileMenu from "../components/MobileMenu.astro";
 import HorizontalRule from "../components/HorizontalRule.astro";
+import Logo from "../components/Logo.astro";
 import { Picture } from "astro:assets";
 import cover from "/src/images/danceophile-cover.jpg";
 import tom from "/src/images/tom.jpg";
 import dancers from "/src/images/dancers-silhouette.avif";
 import postoley from "/src/images/postoley.jpg";
+import MainContent from "../components/MainContent.astro";
 ---
 
 <Base title="Home">
-  <Picture
-    src={cover}
-    formats={["avif", "webp", "jpeg"]}
-    alt="Ukrainian folk dancers performing on a stage."
-  />
-
-  <div class="intro">
-    <p>
+  <Header>
+    <Logo class="logo" />
+  </Header>
+  <MobileMenu />
+  <MainContent>
+    <Picture
+      src={cover}
+      formats={["avif", "webp", "jpeg"]}
+      alt="Ukrainian folk dancers performing on a stage."
+    />
+    <p class="intro">
       Danceophile is an independent dance studio located in the heart of
       Boulder, CO. We offer <a href="/lessons/">classes</a> in ballroom, swing, folk,
       contra, and country dance, led by Colorado Legends of Dance recipient
@@ -24,89 +31,87 @@ import postoley from "/src/images/postoley.jpg";
         href="/postoley/">Postoley Dance Ensemble</a
       >, a dance troupe dedicated to preserving and promoting the beautiful folk
       dance traditions of Ukraine and Eastern Europe.
-    </p>
-
-    <p>
       <a class="more" href="/lessons/#ballroom-dance-lessons"
         >Class schedule ☞</a
       >
+      <a class="more" href="/events/#upcoming-events">Upcoming events ☞</a>
     </p>
-    <p><a class="more" href="/events/#upcoming-events">Upcoming events ☞</a></p>
-  </div>
-  <HorizontalRule />
-  <section>
-    <h2>Meet Tom Masterson</h2>
-    <div class="content">
-      <Picture
-        src={tom}
-        formats={["avif", "webp", "jpeg"]}
-        alt="A passport photo of Tom Masterson."
-      />
+    <HorizontalRule />
+    <section>
+      <h2>Meet Tom Masterson</h2>
+      <div class="content">
+        <Picture
+          src={tom}
+          formats={["avif", "webp", "jpeg"]}
+          alt="A passport photo of Tom Masterson."
+        />
+        <p>
+          Tom is the founder and owner of Danceophile Studio and the director of
+          the <a href="/postoley/">Postoley Dance Ensemble</a>, a performing
+          ethnic dance company specializing in the dance and culture of Ukraine,
+          Poland, and Eastern Europe. He has studied with several world-renowned
+          companies, including the Bukovinian and Virsky ensembles in Ukraine,
+          and the Marie Curie Skodlowska University Institute for Choreography
+          in Lublin, Poland.
+        </p>
+        <a class="more" href="/about/">More About Tom ☞</a>
+      </div>
+    </section>
+
+    <HorizontalRule />
+
+    <div class="flag">
       <p>
-        Tom is the founder and owner of Danceophile Studio and the director of
-        the <a href="/postoley/">Postoley Dance Ensemble</a>, a performing
-        ethnic dance company specializing in the dance and culture of Ukraine,
-        Poland, and Eastern Europe. He has studied with several world-renowned
-        companies, including the Bukovinian and Virsky ensembles in Ukraine, and
-        the Marie Curie Skodlowska University Institute for Choreography in
-        Lublin, Poland.
+        As director of the <a href="/postoley/"
+          >Postoley Ukrainian Dance Ensemble</a
+        >, I call upon the people and nations of the world to take whatever
+        action is needed to <em><strong>halt</strong></em> Russia’s invasion of Ukraine
+        and
+        <em><strong>restore</strong></em> Ukraine’s territorial integrity.
       </p>
-      <a class="more" href="/about/">More About Tom ☞</a>
     </div>
-  </section>
 
-  <HorizontalRule />
+    <HorizontalRule />
 
-  <div class="flag">
-    <p>
-      As director of the <a href="/postoley/"
-        >Postoley Ukrainian Dance Ensemble</a
-      >, I call upon the people and nations of the world to take whatever action
-      is needed to <em><strong>halt</strong></em> Russia’s invasion of Ukraine and
-      <em><strong>restore</strong></em> Ukraine’s territorial integrity.
-    </p>
-  </div>
+    <section class="blue">
+      <h2>Dance Lessons</h2>
+      <div class="content">
+        <Picture
+          src={dancers}
+          formats={["avif", "webp", "jpeg"]}
+          alt="A graphic depicting two silhouetted ballroom dancers."
+        />
+        <p>
+          Danceophile Studio offers group and private instruction in ballroom,
+          swing, contra, folk dancing, and wedding choreography. Classes are led
+          by Colorado Legends of Dance recipient <a href="/about/"
+            >Tom Masterson</a
+          >, and are open to dancers of all levels.
+        </p>
+        <a class="more" href="/lessons/">Learn More ☞</a>
+      </div>
+    </section>
 
-  <HorizontalRule />
+    <HorizontalRule />
 
-  <section class="blue">
-    <h2>Dance Lessons</h2>
-    <div class="content">
-      <Picture
-        src={dancers}
-        formats={["avif", "webp", "jpeg"]}
-        alt="A graphic depicting two silhouetted ballroom dancers."
-      />
-      <p>
-        Danceophile Studio offers group and private instruction in ballroom,
-        swing, contra, folk dancing, and wedding choreography. Classes are led
-        by Colorado Legends of Dance recipient <a href="/about/"
-          >Tom Masterson</a
-        >, and are open to dancers of all levels.
-      </p>
-      <a class="more" href="/lessons/">Learn More ☞</a>
-    </div>
-  </section>
-
-  <HorizontalRule />
-
-  <section class="red">
-    <h2>Postoley Dance Ensemble</h2>
-    <div class="content">
-      <Picture
-        src={postoley}
-        formats={["avif", "webp", "jpeg"]}
-        alt="A postoley dance troop standing on rocks."
-      />
-      <p>
-        The Postoley Dance Ensemble is a performing ethnic dance company
-        specializing in the culture, music, and dance of Ukraine and Poland. We
-        offer spectacular and informative performances for schools,
-        universities, festivals, parties, and special programs.
-      </p>
-      <a class="more" href="/postoley">Learn More ☞</a>
-    </div>
-  </section>
+    <section class="red">
+      <h2>Postoley Dance Ensemble</h2>
+      <div class="content">
+        <Picture
+          src={postoley}
+          formats={["avif", "webp", "jpeg"]}
+          alt="A postoley dance troop standing on rocks."
+        />
+        <p>
+          The Postoley Dance Ensemble is a performing ethnic dance company
+          specializing in the culture, music, and dance of Ukraine and Poland.
+          We offer spectacular and informative performances for schools,
+          universities, festivals, parties, and special programs.
+        </p>
+        <a class="more" href="/postoley">Learn More ☞</a>
+      </div>
+    </section>
+  </MainContent>
 </Base>
 
 <style>
@@ -125,6 +130,8 @@ import postoley from "/src/images/postoley.jpg";
   }
 
   .flag {
+    max-width: 30rem;
+    margin: 0 auto;
     padding: 1rem;
     border-radius: 4px;
     filter: drop-shadow(0px 1px 1px #000);
@@ -162,7 +169,18 @@ import postoley from "/src/images/postoley.jpg";
     border-width: 1px;
     border-radius: 5px;
     font-variant: small-caps;
-    margin-top: 4rem;
+  }
+
+  .hr {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: calc(2rem + 4vw);
+  }
+
+  .more {
+    margin: 1rem 0;
   }
 </style>
 
@@ -170,5 +188,9 @@ import postoley from "/src/images/postoley.jpg";
   h1 {
     position: absolute;
     translate: -1000%;
+  }
+
+  header .hr hr {
+    margin-top: 2rem;
   }
 </style>

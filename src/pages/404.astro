@@ -2,16 +2,20 @@
 import Base from "../layouts/Base.astro";
 import HorizontalRule from "../components/HorizontalRule.astro";
 import { dev } from "../../config.mjs";
+import MainContent from "../components/MainContent.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Base title="Page Not Found" description="Page not found.">
-  <h1>Page Not Found</h1>
-  <p>
-    It looks like this page doesn't exist. If you think this is a mistake,
-    please send an email to <a href=`mailto:${dev.email}`
-      >samuelfeldstein@proton.me</a
-    >.
-  </p>
-
-  <HorizontalRule />
+  <Header>
+    <h1>Page Not Found</h1>
+  </Header>
+  <MainContent>
+    <p>
+      It looks like this page doesn't exist. If you think this is a mistake,
+      please email our developer at <a href=`mailto:${dev.email}`
+        >samuelfeldstein@proton.me</a
+      >.
+    </p>
+  </MainContent>
 </Base>

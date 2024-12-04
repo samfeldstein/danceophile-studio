@@ -3,15 +3,22 @@ import Base from "../layouts/Base.astro";
 import HorizontalRule from "../components/HorizontalRule.astro";
 import { Picture } from "astro:assets";
 import cover from "/src/images/lessons-cover.jpg";
+import MainContent from "../components/MainContent.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Base title="Dance Lessons">
-  <Picture
+<Header>
+  <h1>Dance Lessons</h1>
+</Header>
+  <MainContent>
+    <Picture
+    class:list={"cover"}
     src={cover}
     formats={["avif", "webp", "jpeg"]}
     alt="Two ballroom swing dancers dancing under lights."
   />
-  <h1>Dance Lessons</h1>
+
   <p class="intro">
     Danceophile Studio offers lessons in ballroom, swing, folk, contra, and
     country dance, led by Colorado Legends of Dance recipient <a href="/about/"
@@ -80,8 +87,9 @@ import cover from "/src/images/lessons-cover.jpg";
       >, and are available by appointment.
     </p>
   </section>
-
-  <HorizontalRule />
+  </MainContent>
+  
+  
 </Base>
 
 <style>
