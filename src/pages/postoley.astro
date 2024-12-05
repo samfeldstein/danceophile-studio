@@ -44,7 +44,22 @@ import Header from "../components/Header.astro";
 
     <HorizontalRule />
 
-    <section class="blue">
+    <section class="introduction">
+      <h2>Introduction</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/fTkBej-t5Nw"
+        title="Postoley Introduction Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
+      </iframe>
+    </section>
+
+    <HorizontalRule />
+
+    <section>
       <h2>Live Performances & Workshops</h2>
       <p>
         Postoley offers spectacular and informative performances for schools,
@@ -70,7 +85,7 @@ import Header from "../components/Header.astro";
     <section class="red">
       <h2>Rehearsals</h2>
       <p>
-        We hold rehearsals <strong>every Thursday evening at 7:15pm</strong> at <a
+        Weekly rehearsals are held at <a
           href="https://maps.app.goo.gl/9fPoJrqXurqbcnh4A">Danceophile Studio</a
         >. New members are always welcome. The only prerequisites are some dance
         experience (of any sort), a willingness to learn, and enthusiasm.
@@ -81,7 +96,7 @@ import Header from "../components/Header.astro";
       <p>
         <a href="tel:+13034996363">Call</a> or <a
           href="mailto:masterst@colorado.edu">email</a
-        > Tom for more information.
+        > Tom for rehearsal times.
       </p>
     </section>
   </MainContent>
@@ -131,5 +146,13 @@ import Header from "../components/Header.astro";
     padding: 0.5em;
     border-radius: 2px;
     filter: drop-shadow(0px 1px 1px #000);
+  }
+
+  section.introduction {
+    text-align: center;
+  }
+
+  iframe {
+    max-width: 100%;
   }
 </style>
