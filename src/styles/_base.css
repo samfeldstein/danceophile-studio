@@ -1,0 +1,54 @@
+body {
+  /* For flex on main */
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+
+  @media screen and (min-width: 850px) {
+    font-size: 1.25rem;
+  }
+}
+
+h1 {
+  font-family: Showboat;
+  font-weight: 100;
+  font-size: calc(1.2rem + 8vw);
+
+  @media screen and (min-width: 850px) {
+    font-size: calc(2rem + 5vw);
+  }
+
+  @media screen and (max-width: 849px) {
+    margin: 1.25em 0;
+  }
+}
+
+h1,
+h2 {
+  text-wrap: balance;
+}
+
+h3 {
+  font-family: var(--font-4-bold);
+  font-variant: small-caps;
+  text-align: center;
+}
+
+main {
+  /* Push footer to bottom */
+  flex: 1;
+}
+
+.sidebar.main {
+  display: flex;
+  gap: 4rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.more {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+}
