@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import HorizontalRule from "../components/HorizontalRule.astro";
 import { Picture } from "astro:assets";
-import cover from "/src/images/about-cover.jpg";
+import cover from "/src/images/tom-2.jpg";
 import MainContent from "../components/MainContent.astro";
 import Header from "../components/Header.astro";
 ---
@@ -12,20 +12,22 @@ import Header from "../components/Header.astro";
     <h1>Tom Masterson</h1>
   </Header>
   <MainContent>
-    <Picture
-      class:list={"cover"}
-      src={cover}
-      formats={["avif", "webp", "jpeg"]}
-      alt="A group of folks dancers dancing in a circle."
-    />
-    <p class="intro">
-      Dr. Tom Masterson is the founder and director of Danceophile Studio and
-      the <a href="/postoley/">Postoley Dance Ensemble</a>, a performing ethnic
-      dance company specializing in the dance and culture of Ukraine, Poland,
-      and Eastern Europe.
-    </p>
+    <section class="intro">
+      <Picture
+        class:list={"cover"}
+        src={cover}
+        formats={["avif", "webp", "jpeg"]}
+        alt="A professional head shot of Tom Masterson."
+      />
+      <p class="intro">
+        Dr. Tom Masterson is the founder and director of Danceophile Studio and
+        the <a href="/postoley/">Postoley Dance Ensemble</a>, a performing
+        ethnic dance company specializing in the dance and culture of Ukraine,
+        Poland, and Eastern Europe.
+      </p>
+    </section>
 
-    <section class="red">
+    <section>
       <h2>Dance Background</h2>
       <p>
         Tom studied traditional ethnic dance, choreography and performance with
@@ -51,7 +53,7 @@ import Header from "../components/Header.astro";
 
     <HorizontalRule />
 
-    <section class="blue">
+    <section>
       <h2>Personal Interests</h2>
       <p>
         In addition to dance, Tom teaches physics and mathematics, speaks
@@ -99,12 +101,16 @@ import Header from "../components/Header.astro";
     margin-top: 4rem;
   }
 
-  .intro,
+  p.intro,
   .details {
     font-variant: small-caps;
     padding: 1rem;
     border-style: solid;
     border-width: 1px;
     border-radius: 2px;
+  }
+
+  .cover {
+    border: 15px solid white;
   }
 </style>

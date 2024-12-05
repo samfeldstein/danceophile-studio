@@ -1,10 +1,14 @@
 ---
+// Components
 import Base from "../layouts/Base.astro";
 import HorizontalRule from "../components/HorizontalRule.astro";
-import { Picture } from "astro:assets";
-import cover from "/src/images/lessons-cover.jpg";
 import MainContent from "../components/MainContent.astro";
 import Header from "../components/Header.astro";
+import { Picture } from "astro:assets";
+
+// Images
+import cover from "/src/images/lessons-cover.jpg";
+import wedding from "/src/images/wedding.jpg";
 ---
 
 <Base title="Danceophile Studio">
@@ -71,9 +75,14 @@ import Header from "../components/Header.astro";
       <h2 id="private-instruction">
         Wedding Dance Choreography & Private Instruction
       </h2>
+      <Picture
+        src={wedding}
+        formats={["avif", "webp", "jpeg"]}
+        alt="A bride and groom performing a dip."
+      />
       <p>
-        Private instruction in Ballroom, Swing, Folk, Contra, Country, and
-        Performance, choreographed to your favorite music. We are happy to
+        We offer private instruction in Ballroom, Swing, Folk, Contra, Country,
+        and Performance, choreographed to your favorite music. We are happy to
         instruct individuals, couples, groups, parties, and wedding receptions.
       </p>
 
@@ -102,6 +111,10 @@ import Header from "../components/Header.astro";
     margin-top: 0;
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
+  }
+
+  section {
+    text-align: center;
   }
 
   .intro,
