@@ -2,9 +2,12 @@
 import Base from "../layouts/Base.astro";
 import HorizontalRule from "../components/HorizontalRule.astro";
 import { Picture } from "astro:assets";
-import cover from "/src/images/postoley-cover.jpg";
 import MainContent from "../components/MainContent.astro";
 import Header from "../components/Header.astro";
+
+// Images
+import cover from "/src/images/postoley-cover.jpg";
+import workshops1 from "/src/images/workshops-1.jpg";
 ---
 
 <Base title="Postoley">
@@ -61,6 +64,11 @@ import Header from "../components/Header.astro";
 
     <section>
       <h2>Live Performances & Workshops</h2>
+      <Picture
+        src={workshops1}
+        formats={["avif", "webp", "jpeg"]}
+        alt="A group photo of the Postoley Dance Ensemble at a workshop."
+      />
       <p>
         Postoley offers spectacular and informative performances for schools,
         universities, festivals, parties and special programs. Performances are
