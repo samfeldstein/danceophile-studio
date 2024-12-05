@@ -17,53 +17,47 @@ import niwot from "/src/images/cottonwood.jpg";
   <body>
     <Skiplink />
     <main id="main-content">
-      <div class="postodance">
-        <section id="postoley">
-          <a class="section" href="/postoley/">
-            <h2 class="postoley">
-              <div>
-                <span class="drop-cap">Postoley</span>
-                <span class="drop-cap">Dance</span>
-              </div>
-              <span class="drop-cap">Ensemble</span>
-              <div>Постоли</div>
-            </h2>
-            <div class="pics">
-              <Picture
-                src={flyout}
-                formats={["avif", "webp", "jpeg"]}
-                alt="Tom Masterson and a dance partner performing a Ukrainian folk dance flyout."
-              />
-              <Picture
-                src={lift}
-                formats={["avif", "webp", "jpeg"]}
-                alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
-              />
-            </div>
-          </a>
-        </section>
-
-        <section id="danceophile">
-          <a class="section" href="/danceophile">
-            <h2 class="danceophile">
-              <div class="drop-cap">Danceophile</div>
-              <div class="drop-cap">Studio</div>
-            </h2>
-            <div class="pics">
-              <Picture
-                src={tomLaurie}
-                formats={["avif", "webp", "jpeg"]}
-                alt="Tom Masterson and a dance partner performing a waltz move."
-              />
-              <Picture
-                src={niwot}
-                formats={["avif", "webp", "jpeg"]}
-                alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
-              />
-            </div>
-          </a>
-        </section>
-      </div>
+      <header>
+        <h2 class="postoley">
+          <div class="nowrap">
+            <span class="drop-cap">Postoley</span>
+            <span class="drop-cap">Dance</span>
+          </div>
+          <span class="drop-cap">Ensemble</span>
+          <div class="small">Постоли</div>
+        </h2>
+        <h2 class="danceophile">
+          <div class="drop-cap">Danceophile</div>
+          <div class="drop-cap">Studio</div>
+          <div class="small">with Tom Masterson</div>
+        </h2>
+      </header>
+      <section class="pics">
+        <div class="postoley">
+          <Picture
+            src={flyout}
+            formats={["avif", "webp", "jpeg"]}
+            alt="Tom Masterson and a dance partner performing a Ukrainian folk dance flyout."
+          />
+          <Picture
+            src={lift}
+            formats={["avif", "webp", "jpeg"]}
+            alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
+          />
+        </div>
+        <div class="danceophile">
+          <Picture
+            src={tomLaurie}
+            formats={["avif", "webp", "jpeg"]}
+            alt="Tom Masterson and a dance partner performing a waltz move."
+          />
+          <Picture
+            src={niwot}
+            formats={["avif", "webp", "jpeg"]}
+            alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
+          />
+        </div>
+      </section>
     </main>
     <footer>
       <Copyright />
@@ -73,21 +67,29 @@ import niwot from "/src/images/cottonwood.jpg";
 
 <style>
   main {
-    max-width: 95%;
-    margin: 0 auto;
+    display: grid;
+    padding: 0 1rem;
   }
 
-  section {
-    flex: 1;
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .pics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .pics>div {
+    /* padding: 0 1rem; */
   }
 
   h2 {
     /* text-wrap: nowrap; */
     font-family: Ostrovsky;
-    font-weight: 100;
-    font-size: 4rem;
-    font-size: calc(1.5rem + 1.75vw);
-    font-variant: unset;
 
     /* @media screen and (min-width: 1000px) {
       font-size: 2rem;
@@ -100,6 +102,15 @@ import niwot from "/src/images/cottonwood.jpg";
 
   a.section {
     text-decoration: none;
+  }
+
+  .headers {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .headers {
+    flex: 1;
   }
 
   .drop-cap {
@@ -116,9 +127,12 @@ import niwot from "/src/images/cottonwood.jpg";
     display: inline-block;
   }
 
-  .postodance {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
+  .nowrap {
+    text-wrap: nowrap;
+  }
+
+  .small {
+    font-size: 0.5em;
+    margin-top: 1em;
   }
 </style>
