@@ -2,10 +2,17 @@
 const { class: className, ...rest } = Astro.props;
 ---
 
-<a class={className} {...rest} href="/">
-  <span class="dropcap">Danceophile</span>
-  <span class="dropcap studio">Studio</span>
-</a>
+<div class="container">
+  <a class="danceophile logo" href="/danceophile/">
+    <span class="dropcap">Danceophile</span>
+    <span class="dropcap studio">Studio</span>
+  </a>
+  <a class="postoley logo" href="/postoley/">
+    <span class="dropcap">Postoley</span>
+    <span class="dropcap">Dance</span>
+    <span class="dropcap">Ensemble</span>
+  </a>
+</div>
 
 <style>
   a {
@@ -22,6 +29,11 @@ const { class: className, ...rest } = Astro.props;
     -webkit-text-stroke: 0.005em black;
   }
 
+  .logo {
+    font-size: calc(1rem + 1.5vw);
+    gap: 1rem;
+  }
+
   .studio {
     margin-top: -0.5em;
   }
@@ -29,5 +41,22 @@ const { class: className, ...rest } = Astro.props;
   .dropcap::first-letter {
     font-size: 1.75em;
     font-family: "Grusskarten";
+  }
+
+  .postoley {
+    color: var(--color-3);
+    border-top-style: solid;
+    border-width: 1px;
+  }
+
+  .danceophile {
+    border-bottom-style: solid;
+    border-width: 2px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.095em;
   }
 </style>
