@@ -28,6 +28,10 @@ h2 {
   text-wrap: balance;
 }
 
+h2 {
+  font-size: calc(2rem + 3vw);
+}
+
 h3 {
   font-family: var(--font-4-bold);
   font-variant: small-caps;
@@ -37,6 +41,21 @@ h3 {
 main {
   /* Push footer to bottom */
   flex: 1;
+}
+
+a,
+.a {
+  font-family: var(--font-1);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus,
+.a:hover,
+.a:focus {
+  text-decoration: none;
 }
 
 .sidebar.main {
