@@ -20,6 +20,7 @@ import niwot from "/src/images/cottonwood.jpg";
     <Skiplink />
     <main id="main-content">
       <header>
+        <h1>Home</h1>
         <h2 class="postoley">
           <a href="/postoley/">
             <div>
@@ -149,6 +150,12 @@ import niwot from "/src/images/cottonwood.jpg";
 </html>
 
 <style>
+  h1 {
+    /* Hide visually */
+    position: absolute;
+    translate: -1000%;
+  }
+
   main {
     max-width: 75rem;
     margin: 0 auto;
@@ -198,10 +205,6 @@ import niwot from "/src/images/cottonwood.jpg";
   .small {
     font-size: 0.5em;
     margin-top: 1em;
-  }
-
-  section.contact {
-    margin-bottom: 8rem;
   }
 
   section.contact a {
@@ -307,6 +310,10 @@ import niwot from "/src/images/cottonwood.jpg";
     .directory.links {
       grid-template-columns: 1fr 1fr;
     }
+  }
+
+  footer {
+    margin-top: 4rem;
   }
 </style>
 

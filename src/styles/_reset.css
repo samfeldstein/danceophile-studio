@@ -18,11 +18,6 @@ body {
   min-height: 100vh;
 }
 
-main {
-  /* Fixes overflow issues caused by pre elements */
-  overflow: auto;
-}
-
 img {
   max-width: 100%;
   height: auto;
