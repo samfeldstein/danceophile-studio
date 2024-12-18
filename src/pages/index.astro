@@ -65,9 +65,6 @@ import niwot from "/src/images/cottonwood.jpg";
           />
         </a>
       </section>
-      <!-- <div class="hr">
-        <HorizontalRule />
-      </div> -->
 
       <section class="directory">
         <h2>Site Directory</h2>
@@ -179,10 +176,17 @@ import niwot from "/src/images/cottonwood.jpg";
     margin-top: 0;
   }
 
+  section h2 {
+    border-bottom-style: solid;
+    border-bottom-width: 0.05em;
+    margin-bottom: 1.5em;
+    padding-bottom: 1rem;
+  }
+
   section {
     box-shadow: #666 0px 4px 4px;
     margin: 1rem 0;
-    padding: 4rem;
+    padding: 4rem 1rem;
   }
 
   section.pics {
@@ -240,17 +244,21 @@ import niwot from "/src/images/cottonwood.jpg";
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 5rem;
+    gap: 4rem;
   }
 
   .directory.links {
     display: grid;
     text-align: center;
-    gap: 1.5em;
+    gap: 2em 4em;
   }
 
   .directory.links a {
     color: black;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    border-bottom-color: #7a7a7a;
+    padding-bottom: 1em;
   }
 
   /* All links */
@@ -317,6 +325,10 @@ import niwot from "/src/images/cottonwood.jpg";
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
+    }
+
+    section {
+      padding: 4rem;
     }
 
     section.pics {
