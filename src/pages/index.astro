@@ -152,12 +152,11 @@ import niwot from "/src/images/cottonwood.jpg";
   main {
     max-width: 75rem;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 
-  h2 {
+  header h2 {
     font-size: calc(1.85rem + 2vw);
-    font-family: var(--font-3);
   }
 
   a.pics {
@@ -213,19 +212,14 @@ import niwot from "/src/images/cottonwood.jpg";
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 2rem;
-    font-family: "Tinos";
-    font-variant: small-caps;
     text-align: center;
     gap: 5rem;
   }
 
   .directory.links {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     text-align: center;
     gap: 1.5em;
-    font-size: 2rem;
   }
 
   .directory.links a {
@@ -235,8 +229,9 @@ import niwot from "/src/images/cottonwood.jpg";
   /* All links */
   .links a {
     text-decoration: none;
-    font-family: "Tinos Bold";
+    font-family: var(--font-4-bold);
     font-variant: small-caps;
+    font-size: calc(1.5rem + 0.5vw);
   }
 
   .links a:hover,
@@ -252,6 +247,9 @@ import niwot from "/src/images/cottonwood.jpg";
   h3 {
     margin-top: 0;
     margin-bottom: 0.5em;
+    font-family: var(--font-4);
+    font-variant: small-caps;
+    font-size: calc(1.75rem + 1vw);
   }
 
   .social {
@@ -284,13 +282,11 @@ import niwot from "/src/images/cottonwood.jpg";
   }
 
   .hr {
-    margin: 8rem 0;
+    margin: 4rem 0;
   }
-</style>
 
-<!-- Media queries -->
+  /* Media queries */
 
-<style>
   @media screen and (min-width: 850px) {
     header {
       display: grid;
@@ -302,6 +298,14 @@ import niwot from "/src/images/cottonwood.jpg";
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
+    }
+
+    .hr {
+      margin: 8rem 0;
+    }
+
+    .directory.links {
+      grid-template-columns: 1fr 1fr;
     }
   }
 </style>
