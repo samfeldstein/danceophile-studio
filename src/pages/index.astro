@@ -4,6 +4,7 @@ import Head from "../components/Head.astro";
 import Skiplink from "../components/Skiplink.astro";
 import Copyright from "../components/Copyright.astro";
 import HorizontalRule from "../components/HorizontalRule.astro";
+import Logo from "../components/Logo.astro";
 
 // Images
 import { Picture } from "astro:assets";
@@ -21,7 +22,7 @@ import niwot from "/src/images/cottonwood.jpg";
       <header>
         <h2 class="postoley">
           <a href="/postoley/">
-            <div class="nowrap">
+            <div>
               <span class="drop-cap">Postoley</span>
               <span class="drop-cap">Dance</span>
             </div>
@@ -154,14 +155,8 @@ import niwot from "/src/images/cottonwood.jpg";
     padding: 0 1rem;
   }
 
-  header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
   h2 {
-    font-size: calc(2rem + 2vw);
+    font-size: calc(1.85rem + 2vw);
     font-family: var(--font-3);
   }
 
@@ -205,10 +200,6 @@ import niwot from "/src/images/cottonwood.jpg";
 
   span.drop-cap {
     display: inline-block;
-  }
-
-  .nowrap {
-    text-wrap: nowrap;
   }
 
   .small {
@@ -300,6 +291,18 @@ import niwot from "/src/images/cottonwood.jpg";
 
   .hr {
     margin: 8rem 0;
+  }
+</style>
+
+<!-- Media queries -->
+
+<style>
+  @media screen and (min-width: 850px) {
+    header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
   }
 </style>
 
