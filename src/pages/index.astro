@@ -65,9 +65,9 @@ import niwot from "/src/images/cottonwood.jpg";
           />
         </a>
       </section>
-      <div class="hr">
+      <!-- <div class="hr">
         <HorizontalRule />
-      </div>
+      </div> -->
 
       <section class="directory">
         <h2>Site Directory</h2>
@@ -82,9 +82,9 @@ import niwot from "/src/images/cottonwood.jpg";
           <a href="/gallery/">Gallery</a>
         </div>
       </section>
-      <div class="hr">
+      <!-- <div class="hr">
         <HorizontalRule />
-      </div>
+      </div> -->
 
       <section class="contact">
         <h2>Contact</h2>
@@ -150,7 +150,10 @@ import niwot from "/src/images/cottonwood.jpg";
 </html>
 
 <style>
-  
+  body {
+    padding-top: 1rem;
+  }
+
   h1 {
     /* Hide visually */
     position: absolute;
@@ -164,13 +167,27 @@ import niwot from "/src/images/cottonwood.jpg";
   }
 
   header {
-    padding-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    box-shadow: #666 0px 4px 5px;
+    border-radius: 2px;
   }
-  
+
   header h2 {
     font-size: calc(1.85rem + 2vw);
     /* Without this, html background color shows for some reason. */
     margin-top: 0;
+  }
+
+  section {
+    box-shadow: #666 0px 4px 4px;
+    margin: 1rem 0;
+    padding: 4rem;
+  }
+
+  section.pics {
+    background-color: white;
+    padding: 0.5rem;
   }
 
   a.pics {
@@ -306,6 +323,7 @@ import niwot from "/src/images/cottonwood.jpg";
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
+      padding: 2rem;
     }
 
     .hr {
@@ -316,13 +334,13 @@ import niwot from "/src/images/cottonwood.jpg";
       grid-template-columns: 1fr 1fr;
     }
   }
-
-  footer {
-    margin-top: 4rem;
-  }
 </style>
 
 <style is:global>
+  img {
+    box-shadow: #666 0 2px 4px;
+  }
+
   .copyright a {
     font-family: "Lissain";
     text-decoration-thickness: 1px;

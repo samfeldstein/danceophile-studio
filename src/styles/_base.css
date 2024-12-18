@@ -56,6 +56,10 @@ a:focus,
   text-decoration: none;
 }
 
+img {
+  box-shadow: #666 0 4px 10px;
+}
+
 .sidebar.main {
   display: flex;
   gap: 4rem;
