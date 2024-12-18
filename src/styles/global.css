@@ -10,8 +10,6 @@ html {
 body {
   background-color: var(--background-color);
   margin: 0 auto;
-  /* Without this, html background color is exposed for some reason */
-  overflow: auto; 
 }
 
 h1,

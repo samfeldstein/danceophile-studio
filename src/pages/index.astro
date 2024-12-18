@@ -150,6 +150,7 @@ import niwot from "/src/images/cottonwood.jpg";
 </html>
 
 <style>
+  
   h1 {
     /* Hide visually */
     position: absolute;
@@ -157,13 +158,19 @@ import niwot from "/src/images/cottonwood.jpg";
   }
 
   main {
-    max-width: 75rem;
+    max-width: 80rem;
     margin: 0 auto;
     padding: 0 0.5rem;
   }
 
+  header {
+    padding-top: 1rem;
+  }
+  
   header h2 {
     font-size: calc(1.85rem + 2vw);
+    /* Without this, html background color shows for some reason. */
+    margin-top: 0;
   }
 
   a.pics {
@@ -262,13 +269,11 @@ import niwot from "/src/images/cottonwood.jpg";
   }
 
   svg {
-    /* background-color: white; */
     transition:
       fill 0.2s ease-in-out,
       background-color 0.2s ease;
     box-shadow: #666 0 1px 1px;
     border-radius: 7px;
-    /* fill: var(--color-2); */
   }
 
   svg {
