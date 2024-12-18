@@ -69,7 +69,7 @@ import niwot from "/src/images/cottonwood.jpg";
 
       <section class="directory">
         <h2>Site Directory</h2>
-        <div class="links">
+        <div class="directory links">
           <a href="/danceophile/">Danceophile Studio</a>
           <a href="/postoley/">Postoley Dance Ensemble</a>
           <a href="/tutoring/">Physics & Math Tutoring</a>
@@ -86,7 +86,7 @@ import niwot from "/src/images/cottonwood.jpg";
 
       <section class="contact">
         <h2>Contact</h2>
-        <div class="contact-links">
+        <div class="links contact">
           <div>
             <h3>Email</h3>
             <a class="contact" href="mailto:masterst@colorado.edu"
@@ -220,7 +220,11 @@ import niwot from "/src/images/cottonwood.jpg";
     margin-bottom: 8rem;
   }
 
-  div.contact-links {
+  section.contact a {
+    color: var(--color-2);
+  }
+
+  .links.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -231,16 +235,7 @@ import niwot from "/src/images/cottonwood.jpg";
     gap: 5rem;
   }
 
-  div.contact-links a {
-    text-decoration: none;
-  }
-
-  div.contact-links a:hover,
-  div.contact-links a:focus {
-    text-decoration: underline;
-  }
-
-  div.links {
+  .directory.links {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
@@ -248,15 +243,19 @@ import niwot from "/src/images/cottonwood.jpg";
     font-size: 2rem;
   }
 
-  div.links a {
-    font-family: "Tinos Bold";
-    font-variant: small-caps;
-    text-decoration: none;
+  .directory.links a {
     color: black;
   }
 
-  div.links a:hover,
-  div.links a:hover {
+  /* All links */
+  .links a {
+    text-decoration: none;
+    font-family: "Tinos Bold";
+    font-variant: small-caps;
+  }
+
+  .links a:hover,
+  .links a:hover {
     text-decoration: underline;
     color: var(--color-2);
     text-decoration-thickness: 0.045em;
