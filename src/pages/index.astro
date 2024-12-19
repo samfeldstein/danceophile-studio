@@ -4,7 +4,8 @@ import Head from "../components/Head.astro";
 import Skiplink from "../components/Skiplink.astro";
 import Copyright from "../components/Copyright.astro";
 import HorizontalRule from "../components/HorizontalRule.astro";
-import Logo from "../components/Logo.astro";
+import EmailForm from "../components/EmailForm.astro";
+import ContactForm from "../components/ContactForm.astro";
 
 // Images
 import { Picture } from "astro:assets";
@@ -83,6 +84,7 @@ import niwot from "/src/images/cottonwood.jpg";
 
       <section class="contact">
         <h2>Contact</h2>
+        <ContactForm />
         <div class="links contact">
           <div>
             <h3>Email</h3>
@@ -231,6 +233,10 @@ import niwot from "/src/images/cottonwood.jpg";
     color: var(--color-2);
   }
 
+  div.contact {
+    margin-top: 4rem;
+  }
+
   .links.contact {
     display: flex;
     flex-direction: column;
@@ -307,7 +313,7 @@ import niwot from "/src/images/cottonwood.jpg";
   }
 
   footer {
-margin-top: 4rem;
+    margin-top: 4rem;
   }
 
   /* Media queries */

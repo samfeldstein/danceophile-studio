@@ -25,6 +25,12 @@ h2 {
   filter: drop-shadow(0px 0.5px 0.5px #666);
 }
 
+h3 {
+  font-family: var(--font-4-bold);
+  font-variant: small-caps;
+  text-align: center;
+}
+
 p {
   font-family: var(--font-4);
   text-align: justify;

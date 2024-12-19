@@ -28,14 +28,6 @@ h2 {
   text-wrap: balance;
 }
 
-
-
-h3 {
-  font-family: var(--font-4-bold);
-  font-variant: small-caps;
-  text-align: center;
-}
-
 main {
   /* Push footer to bottom */
   flex: 1;
