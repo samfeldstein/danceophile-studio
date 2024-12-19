@@ -39,6 +39,7 @@ import niwot from "/src/images/cottonwood.jpg";
           </a>
         </h2>
       </header>
+      <HorizontalRule />
       <section class="pics">
         <a class="pics postoley" href="/postoley/">
           <Picture
@@ -79,9 +80,6 @@ import niwot from "/src/images/cottonwood.jpg";
           <a href="/gallery/">Gallery</a>
         </div>
       </section>
-      <!-- <div class="hr">
-        <HorizontalRule />
-      </div> -->
 
       <section class="contact">
         <h2>Contact</h2>
@@ -147,10 +145,6 @@ import niwot from "/src/images/cottonwood.jpg";
 </html>
 
 <style>
-  body {
-    padding-top: 1rem;
-  }
-
   h1 {
     /* Hide visually */
     position: absolute;
@@ -158,22 +152,25 @@ import niwot from "/src/images/cottonwood.jpg";
   }
 
   main {
-    max-width: 80rem;
+    max-width: 90rem;
     margin: 0 auto;
     padding: 0 0.5rem;
   }
 
   header {
-    margin-bottom: 1rem;
-    padding: 1rem 0;
-    box-shadow: #666 0px 4px 5px;
-    border-radius: 2px;
+    display: grid;
+    gap: 2rem;
+    padding-top: 1rem;
   }
 
   header h2 {
     font-size: calc(1.85rem + 2vw);
-    /* Without this, html background color shows for some reason. */
-    margin-top: 0;
+    /* Without this, html background shows for some reason. */
+    margin: 0;
+  }
+
+  section.directory {
+    margin: 10rem 0;
   }
 
   section h2 {
@@ -183,13 +180,8 @@ import niwot from "/src/images/cottonwood.jpg";
     padding-bottom: 1rem;
   }
 
-  section {
-    box-shadow: #666 0px 4px 4px;
-    margin: 1rem 0;
-    padding: 4rem 1rem;
-  }
-
   section.pics {
+    box-shadow: #666 0px 4px 4px;
     background-color: white;
     padding: 0.5rem;
   }
@@ -314,21 +306,15 @@ import niwot from "/src/images/cottonwood.jpg";
     fill: var(--color-2);
   }
 
-  .hr {
-    margin: 4rem 0;
+  footer {
+margin-top: 4rem;
   }
 
   /* Media queries */
 
   @media screen and (min-width: 850px) {
     header {
-      display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-
-    section {
-      padding: 4rem;
     }
 
     section.pics {
@@ -349,6 +335,10 @@ import niwot from "/src/images/cottonwood.jpg";
 </style>
 
 <style is:global>
+  hr.separator {
+    margin: 2rem 0;
+  }
+
   img {
     box-shadow: #666 0 2px 4px;
   }
@@ -362,5 +352,11 @@ import niwot from "/src/images/cottonwood.jpg";
   .copyright a:hover,
   .copyright a:focus {
     text-decoration: none;
+  }
+
+  @media screen and (min-width: 850px) {
+    hr.separator {
+      margin: 4rem 0;
+    }
   }
 </style>
