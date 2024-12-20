@@ -38,7 +38,6 @@
     </div>
 
     <div class="checkbox">
-      <input type="hidden" name="email-list-checkbox" value="no" />
       <input
         type="checkbox"
         id="email-list-checkbox"
@@ -155,3 +154,12 @@
     color: var(--color-2);
   }
 </style>
+
+<script>
+  document
+    .getElementById("email-list-checkbox")
+    .addEventListener(
+      "change",
+      (event) => (event.target.value = event.target.checked ? "yes" : "no"),
+    );
+</script>
