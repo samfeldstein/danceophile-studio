@@ -8,6 +8,7 @@ import { site } from "../../config.mjs";
 // Styles
 import "/src/styles/global.css";
 
+// Props
 const { title, description } = Astro.props;
 ---
 
@@ -18,10 +19,4 @@ const { title, description } = Astro.props;
   <meta name="description" content={description || site.description} />
   <title>{title} | {site.title}</title>
   <Icons />
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title={site.title}
-    href=`${site.url}/feed.xml`
-  />
 </head>
