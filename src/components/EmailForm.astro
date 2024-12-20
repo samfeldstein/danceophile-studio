@@ -1,22 +1,22 @@
 <!-- If you ever feel like it, a better way to do this would be to create a parent form component, then add content as needed. That way you don't double up on styles. -->
 <form name="email-collection" method="POST" netlify>
   <fieldset>
-    <legend><h3>Join Our Email List</h3></legend>
+    <legend>Join Our Email List</legend>
     <div>
-      <label for="email-first-name">First Name</label>
+      <label for="email-list-first-name">First Name</label>
       <input
         type="text"
-        name="email-first-name"
-        id="email-first-name"
+        name="email-list-first-name"
+        id="email-list-first-name"
         placeholder="Your first name"
       />
     </div>
     <div>
-      <label for="email-last-name">Last Name</label>
+      <label for="email-list-last-name">Last Name</label>
       <input
         type="text"
-        name="email-last-name"
-        id="email-last-name"
+        name="email-list-last-name"
+        id="email-list-last-name"
         placeholder="Your last name"
       />
     </div>
@@ -36,8 +36,9 @@
 </form>
 
 <style>
-  h3 {
+  legend {
     font-size: calc(1.75rem + 1vw);
+    font-variant: small-caps;
   }
 
   form {

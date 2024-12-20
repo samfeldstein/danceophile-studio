@@ -3,27 +3,25 @@
 ---
 
 <form name="contact" method="POST" netlify>
-  <legend>
-    <h3>Send Us a Message</h3>
-  </legend>
+  <legend>Send Us a Message</legend>
   <fieldset>
     <div>
-      <label for="first-name">First Name</label>
+      <label for="contact-first-name">First Name</label>
       <input
         type="text"
-        id="first-name"
-        name="first-name"
+        id="contact-first-name"
+        name="contact-first-name"
         required
         placeholder="Your first name"
       />
     </div>
 
     <div>
-      <label for="last-name">Last Name</label>
+      <label for="contact-last-name">Last Name</label>
       <input
         type="text"
-        id="last-name"
-        name="last-name"
+        id="contact-last-name"
+        name="contact-last-name"
         placeholder="Your last name"
       />
     </div>
@@ -40,26 +38,31 @@
     </div>
 
     <div class="checkbox">
-      <input type="checkbox" id="email-list" name="email-list" checked />
-      <label for="email-list">Join our email list</label>
+      <input
+        type="checkbox"
+        id="email-list-checkbox"
+        name="email-list-checkbox"
+        checked
+      />
+      <label for="email-list-checkbox">Join our email list</label>
     </div>
 
     <div>
-      <label for="phone">Phone Number</label>
+      <label for="contact-phone">Phone Number</label>
       <input
         type="tel"
-        id="phone"
-        name="phone"
+        id="contact-phone"
+        name="contact-phone"
         placeholder="(555) 555-5555"
         pattern="[0-9\s\(\)\-\+]+"
       />
     </div>
 
     <div>
-      <label for="message">Message</label>
+      <label for="contact-message">Message</label>
       <textarea
-        id="message"
-        name="message"
+        id="contact-message"
+        name="contact-message"
         rows="5"
         placeholder="Your message..."
         required></textarea>
@@ -70,8 +73,9 @@
 </form>
 
 <style>
-  h3 {
+  legend {
     font-size: calc(1.75rem + 1vw);
+    font-variant: small-caps;
   }
 
   form {
