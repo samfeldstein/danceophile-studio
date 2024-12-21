@@ -2,7 +2,7 @@
 // ContactForm.astro
 ---
 
-<form name="contact" action="/form-submission/"  method="POST" netlify>
+<form name="contact" action="/form-submission/" method="POST" netlify>
   <legend>Send Us a Message</legend>
   <fieldset>
     <div>
@@ -37,23 +37,10 @@
       />
     </div>
 
-    <fieldset>
-      <legend>Join our email list:</legend>
-      <!-- Provides a description for the group -->
-      <div class="radio">
-        <input
-          type="radio"
-          id="email-list-yes"
-          name="email-list"
-          value="yes"
-          checked
-        />
-        <label for="email-list-yes">Yes</label>
-
-        <input type="radio" id="email-list-no" name="email-list" value="no" />
-        <label for="email-list-no">No</label>
-      </div>
-    </fieldset>
+    <div class="checkbox">
+      <input type="checkbox" id="email-list" name="email-list" checked />
+      <label for="email-list">Join our email list</label>
+    </div>
 
     <div>
       <label for="contact-phone">Phone Number</label>
@@ -103,7 +90,7 @@
     gap: 0.5rem;
   }
 
-  form .radio {
+  form .checkbox {
     display: flex;
     gap: 0.5rem;
   }
