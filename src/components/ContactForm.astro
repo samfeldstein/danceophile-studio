@@ -1,9 +1,5 @@
----
-// ContactForm.astro
----
-
 <form name="contact" action="/form-submission/" method="POST" netlify>
-  <legend>Send Us a Message</legend>
+  <h3>Send Us a Message</h3>
   <fieldset>
     <div>
       <label for="contact-first-name">First Name</label>
@@ -38,7 +34,15 @@
     </div>
 
     <div class="checkbox">
-      <input type="checkbox" id="email-list" name="email-list" checked />
+      <!-- Hidden input to handle unchecked state -->
+      <input type="hidden" name="email-list" value="no" />
+      <input
+        type="checkbox"
+        id="email-list"
+        name="email-list"
+        checked
+        value="yes"
+      />
       <label for="email-list">Join our email list</label>
     </div>
 
