@@ -1,7 +1,10 @@
 <!-- If you ever feel like it, a better way to do this would be to create a parent form component, then add content as needed. That way you don't double up on styles. -->
-<form name="email-list" method="POST" netlify>
-  <fieldset>
+<form name="email-list" action="/form-submission/" method="POST" netlify>
+  <header>
     <h3>Join Our Email List</h3>
+    <small>Receive updates about upcoming events.</small>
+  </header>
+  <fieldset>
     <div>
       <label for="email-list-first-name">First Name</label>
       <input
@@ -36,9 +39,9 @@
 </form>
 
 <style>
-  legend {
+  h3 {
     font-size: calc(1.75rem + 1vw);
-    font-variant: small-caps;
+    margin-bottom: 0;
   }
 
   form {
@@ -52,6 +55,16 @@
     max-width: 50rem;
     box-shadow: #666 0 2px 4px;
     margin-top: 2rem;
+  }
+
+  form header {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  small {
+    font-style: italic;
   }
 
   form div {
