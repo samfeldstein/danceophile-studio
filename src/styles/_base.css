@@ -2,25 +2,12 @@ body {
   /* For flex on main */
   display: flex;
   flex-direction: column;
-  font-size: 1.25rem;
-
-  @media screen and (min-width: 850px) {
-    font-size: 1.25rem;
-  }
 }
 
 h1 {
   font-family: Showboat;
   font-weight: 100;
-  font-size: calc(1.2rem + 6vw);
-
-  @media screen and (min-width: 850px) {
-    font-size: calc(2rem + 5vw);
-  }
-
-  @media screen and (max-width: 849px) {
-    margin: 1.25em 0;
-  }
+  font-size: calc(2rem + 4vw);
 }
 
 h1,
@@ -64,4 +51,10 @@ img {
   display: block;
   text-align: center;
   margin: 1rem 0;
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    font-size: 1.25rem;
+  }
 }
