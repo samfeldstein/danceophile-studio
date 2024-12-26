@@ -54,4 +54,18 @@ const { title, description } = Astro.props;
   <meta name="description" content={description || site.description} />
   <title>{title} | {site.title}</title>
   <Icons />
+  <script type="speculationrules">
+    {
+      "prefetch": [
+        {
+          "source": "document",
+          "where": {
+            "href_matches": "/*",
+            "relative_to": "document"
+          },
+          "eagerness": "immediate"
+        }
+      ]
+    }
+  </script>
 </head>
