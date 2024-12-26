@@ -1,0 +1,76 @@
+---
+// Layout
+import Base from "../layouts/Base.astro";
+
+// Components
+import MainContent from "../components/MainContent.astro";
+import Header from "../components/Header.astro";
+import ContactForm from "../components/ContactForm.astro";
+import EmailForm from "../components/EmailForm.astro";
+---
+
+<Base title="Contact">
+  <Header>
+    <h1>Contact</h1>
+  </Header>
+  <MainContent>
+    <section class="forms">
+      <h2>Contact Forms</h2>
+      <ContactForm />
+      <EmailForm />
+    </section>
+
+    <section class="contact-info">
+      <h2>Contact Info</h2>
+      <div>
+        <h3>Email</h3>
+        <a class="contact" href="mailto:masterst@colorado.edu"
+          >masterst@colorado.edu</a
+        >
+      </div>
+      <div class="address">
+        <h3>Mailing Address</h3>
+        <a
+          class="address contact"
+          href="https://maps.app.goo.gl/7fttA6CCH5VmFk1S9"
+          target="_blank"
+        >
+          <div>Danceophile Studio</div>
+          <div>250 31st St</div>
+          <div>Boulder, CO 80305</div>
+        </a>
+      </div>
+      <div>
+        <h3>Phone</h3>
+        <a class="contact" href="tel:+13034996363">(303) 499-6363</a>
+      </div>
+    </section>
+  </MainContent>
+</Base>
+
+<style>
+  h2 {
+    /* Hide visually */
+    position: absolute;
+    translate: -1000%;
+  }
+
+  section.contact-info {
+    margin-top: 2rem;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    padding: 1rem;
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+  }
+</style>
+
+<style is:global>
+  /* Aligns bottom with main bottom */
+  main {
+    margin-bottom: 1rem;
+  }
+</style>
