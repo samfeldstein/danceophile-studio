@@ -21,6 +21,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  animation: fadeIn .5s ease-in;
 }
 
 pre {
@@ -43,4 +44,16 @@ select {
 
 summary {
   cursor: pointer;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

@@ -46,11 +46,13 @@ import niwot from "/src/images/cottonwood.jpg";
           <Picture
             src={flyout}
             formats={["avif", "webp", "jpeg"]}
+            fetchpriority="high"
             alt="Tom Masterson and a dance partner performing a Ukrainian folk dance flyout."
           />
           <Picture
             src={lift}
             formats={["avif", "webp", "jpeg"]}
+            fetchpriority="high"
             alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
           />
         </a>
@@ -58,11 +60,13 @@ import niwot from "/src/images/cottonwood.jpg";
           <Picture
             src={tomLaurie}
             formats={["avif", "webp", "jpeg"]}
+            fetchpriority="high"
             alt="Tom Masterson and a dance partner performing a waltz move."
           />
           <Picture
             src={niwot}
             formats={["avif", "webp", "jpeg"]}
+            fetchpriority="high"
             alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
           />
         </a>
@@ -219,7 +223,7 @@ import niwot from "/src/images/cottonwood.jpg";
 
   .drop-cap::first-letter {
     font-size: 1.75em;
-    font-family: "Grusskarten", Georgia, 'Times New Roman', Times, serif;
+    font-family: "Grusskarten", Georgia, "Times New Roman", Times, serif;
     font-weight: 100;
   }
 
@@ -345,7 +349,7 @@ import niwot from "/src/images/cottonwood.jpg";
   form {
     font-size: calc(1.25rem + 0.5vw);
   }
-  
+
   img {
     box-shadow: #666 0 2px 4px;
   }

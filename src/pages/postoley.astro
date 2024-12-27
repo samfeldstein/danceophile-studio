@@ -19,6 +19,7 @@ import workshops1 from "/src/images/workshops-1.jpg";
       class:list={"cover"}
       src={cover}
       formats={["avif", "webp", "jpeg"]}
+      fetchpriority="high"
       alt="Two pairs of postoley folk dancers."
     />
 
@@ -57,6 +58,7 @@ import workshops1 from "/src/images/workshops-1.jpg";
           title="Postoley Introduction Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
+          loading="lazy"
         >
         </iframe>
       </div>
@@ -69,6 +71,7 @@ import workshops1 from "/src/images/workshops-1.jpg";
       <Picture
         src={workshops1}
         formats={["avif", "webp", "jpeg"]}
+        loading="lazy"
         alt="A group photo of the Postoley Dance Ensemble at a workshop."
       />
       <p>

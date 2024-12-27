@@ -1,6 +1,7 @@
 ---
 // Components
 import Icons from "../components/Icons.astro";
+import { ViewTransitions } from "astro:transitions";
 
 // Data
 import { site } from "../../config.mjs";
@@ -32,6 +33,7 @@ const { title, description } = Astro.props;
   <meta name="generator" content={Astro.generator} />
   <meta name="description" content={description || site.description} />
   <title>{title} | {site.title}</title>
+  <ViewTransitions />
   <Icons />
   <script type="speculationrules">
     {
