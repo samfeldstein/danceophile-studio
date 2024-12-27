@@ -21,7 +21,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  animation: fadeIn .5s ease-in;
+  animation: fadeIn .5s ease-in forwards;
 }
 
 pre {
