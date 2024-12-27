@@ -21,13 +21,14 @@ const coreAssets = [
   "/fonts/Tinos-Italic.woff2",
   "/fonts/Tinos-Regular.woff",
   "/fonts/Tinos-Regular.woff2",
-  // "/favicon.ico",
+  "/favicon.ico",
   "/favicon.svg",
-  // "/android-chrome-192x192.png",
-  // "/android-chrome-512x512.png",
-  // "/apple-touch-icon.png",
-  // "/favicon-16x16.png",
-  // "/favicon-32x32.png"
+  "/android-chrome-192x192.png",
+  "/android-chrome-512x512.png",
+  "/apple-touch-icon.png",
+  "/favicon-16x16.png",
+  "/favicon-32x32.png",
+  "/site.webmanifest"
 ];
 
 // Cache assets on install
