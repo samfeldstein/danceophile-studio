@@ -27,6 +27,7 @@ h2 {
 
 h3 {
   font-family: var(--font-4-bold);
+  font-weight: 700;
   font-variant: small-caps;
   text-align: center;
 }

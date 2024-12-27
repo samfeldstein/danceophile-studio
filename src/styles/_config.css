@@ -5,9 +5,9 @@
   --color-4: #212121;
   --color-5: #FFDD00;
 
-  --font-1: "Lissain";
-  --font-3: "Ostrovsky";
-  --font-4: "Tinos";
-  --font-4-bold: "Tinos Bold";
-  --font-5: "LevType";
+  --font-1: "Lissain", Georgia, 'Times New Roman', Times, serif;
+  --font-3: "Ostrovsky", Arial, Helvetica, sans-serif;
+  --font-4: "Tinos", 'Times New Roman', Times, serif;
+  --font-4-bold: "Tinos Bold", 'Times New Roman', Times, serif;
+  --font-5: "LevType", 'Times New Roman', Times, serif;
 }

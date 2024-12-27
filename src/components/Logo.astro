@@ -3,11 +3,11 @@ const { class: className, ...rest } = Astro.props;
 ---
 
 <div class="container">
-  <a class="danceophile logo" href="/danceophile/">
+  <a class="danceophile" href="/danceophile/">
     <span class="dropcap">Danceophile</span>
     <span class="dropcap studio">Studio</span>
   </a>
-  <a class="postoley logo" href="/postoley/">
+  <a class="postoley" href="/postoley/">
     <span class="dropcap">Postoley</span>
     <span class="dropcap">Dance</span>
     <span class="dropcap">Ensemble</span>
@@ -18,20 +18,18 @@ const { class: className, ...rest } = Astro.props;
   a {
     text-decoration: none;
     font-family: var(--font-5);
+    font-variant: small-caps;
+    font-size: calc(1rem + 2vw);
     display: flex;
     justify-content: center;
     align-items: baseline;
     flex-wrap: wrap;
+    gap: 1rem;
   }
 
   span {
     display: block;
     -webkit-text-stroke: 0.005em black;
-  }
-
-  .logo {
-    font-size: calc(1rem + 1.5vw);
-    gap: 1rem;
   }
 
   .studio {
@@ -40,7 +38,7 @@ const { class: className, ...rest } = Astro.props;
 
   .dropcap::first-letter {
     font-size: 1.75em;
-    font-family: "Grusskarten";
+    font-family: "Grusskarten", Georgia, 'Times New Roman', Times, serif;
   }
 
   .postoley {
