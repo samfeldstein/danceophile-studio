@@ -21,13 +21,15 @@ const coreAssets = [
   "/fonts/Tinos-Italic.woff2",
   "/fonts/Tinos-Regular.woff",
   "/fonts/Tinos-Regular.woff2",
+  "/images/cottonwood.jpg",
+  "/videos/cottonwood.mp4",
+  "/videos/cottonwood.webm",
   "/favicon.ico",
   "/favicon.svg",
-  "/android-chrome-192x192.png",
-  "/android-chrome-512x512.png",
+  "/favicon-96x96.png",
+  "/web-app-manifest-192x192.png",
+  "/web-app-manifest-512x512.png",
   "/apple-touch-icon.png",
-  "/favicon-16x16.png",
-  "/favicon-32x32.png",
   "/site.webmanifest"
 ];
 
