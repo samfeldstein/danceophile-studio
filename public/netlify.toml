@@ -1,11 +1,72 @@
+# Cache static assets (CSS, JS, images, etc.) for a year
 [[headers]]
-  for = "*.mp4"
+  for = "/.woff"
   [headers.values]
-  Content-Encoding = "br"
-  Content-Type = "video/webm"
+  cache-control = '''
+	public
+  max-age=31536000,
+	immutable'''
 
 [[headers]]
-  for = "*.mp4"
+  for = "/.woff2"
   [headers.values]
-  Content-Encoding = "br"
-  Content-Type = "video/mp4"
+  cache-control = '''
+	public
+  max-age=31536000,
+	immutable'''
+
+[[headers]]
+  for = "/.jpg"
+  [headers.values]
+  cache-control = '''
+	public
+  max-age=31536000,
+	immutable'''
+
+[[headers]]
+  for = "/.jpeg"
+  [headers.values]
+  cache-control = '''
+	public
+  max-age=31536000,
+	immutable'''
+
+[[headers]]
+  for = "/.png"
+  [headers.values]
+  cache-control = '''
+	public
+  max-age=31536000,
+	immutable'''
+
+[[headers]]
+  for = "/.webp"
+  [headers.values]
+  cache-control = '''
+	public
+  max-age=31536000,
+	immutable'''
+
+[[headers]]
+  for = "/.avif"
+  [headers.values]
+  cache-control = '''
+	public
+  max-age=31536000,
+	immutable'''
+
+[[headers]]
+  for = "/.webm"
+  [headers.values]
+  cache-control = '''
+	public
+  max-age=31536000,
+	immutable'''
+
+[[headers]]
+  for = "/.mp4"
+  [headers.values]
+  cache-control = '''
+	public
+  max-age=31536000,
+	immutable'''
