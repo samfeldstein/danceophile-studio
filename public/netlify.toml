@@ -1,0 +1,11 @@
+[[headers]]
+  for = "*.mp4"
+  [headers.values]
+  Content-Encoding = "br"
+  Content-Type = "video/webm"
+
+[[headers]]
+  for = "*.mp4"
+  [headers.values]
+  Content-Encoding = "br"
+  Content-Type = "video/mp4"
