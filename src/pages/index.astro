@@ -9,6 +9,7 @@ import ContactForm from "../components/ContactForm.astro";
 
 // Images
 import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 import flyout from "/src/images/flyout.jpg";
 import lift from "/src/images/tom-greg-lift.jpg";
 import tomLaurie from "/src/images/tom-laurie.jpg";
@@ -58,31 +59,32 @@ import niwot from "/src/images/cottonwood.jpg";
       <HorizontalRule />
       <section class="pics">
         <a class="pics postoley" href="/postoley/">
-          <Picture
+          <Image
             src={flyout}
-            formats={["avif", "webp", "jpeg"]}
-            loading="eager"
-            fetchpriority="high"
+            widths={[240, 540, 720, flyout.width]}
+            sizes="(min-width: 1520px) 672px, (min-width: 860px) 45.31vw, calc(100vw - 32px)"
             alt="Tom Masterson and a dance partner performing a Ukrainian folk dance flyout."
           />
-          <Picture
+
+          <Image
             src={lift}
-            formats={["avif", "webp", "jpeg"]}
+            widths={[240, 540, 720, lift.width]}
+            sizes="(min-width: 1520px) 672px, (min-width: 860px) 45.31vw, calc(100vw - 32px)"
             alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
           />
         </a>
         <a class="pics danceophile" href="/danceophile/">
-          <Picture
+          <Image
             src={tomLaurie}
-            formats={["avif", "webp", "jpeg"]}
-            loading="eager"
-            fetchpriority="high"
+            widths={[240, 540, 720, tomLaurie.width]}
+            sizes="(min-width: 1520px) 672px, (min-width: 860px) 45.31vw, calc(100vw - 32px)"
             alt="Tom Masterson and a dance partner performing a waltz move."
           />
-          <Picture
+          <Image
             src={niwot}
-            formats={["avif", "webp", "jpeg"]}
-            alt="Tom Masterson and a dance partner performing a Ukrainian folk dance lift."
+            widths={[240, 540, 720, niwot.width]}
+            sizes="(min-width: 1520px) 672px, (min-width: 860px) 45.31vw, calc(100vw - 32px)"
+            alt="A crowd of dancers dancing on a public square."
           />
         </a>
       </section>
