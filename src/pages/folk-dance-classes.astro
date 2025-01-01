@@ -1,0 +1,34 @@
+---
+// Layout
+import Base from "../layouts/Base.astro";
+
+// Components
+import MainContent from "../components/MainContent.astro";
+import Header from "../components/Header.astro";
+import { Image } from "astro:assets";
+
+// Images
+import cover from "/src/images/workshops-2.jpg";
+---
+
+<Base title="Folk Dance Classes">
+  <Header>
+    <h1>Folk Dance Classes</h1>
+  </Header>
+  <MainContent>
+    <Image
+      src={cover}
+      class="cover"
+      widths={[240, 540, 720, cover.width]}
+      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+      alt="A selfie of Tom Masterson a snowy winter day."
+      fetchpriority="high"
+      loading="eager"
+    />
+    <p>
+      Tom is available for folk dance workshops and classes. <a href="/contact/"
+        >Contact</a
+      > him for more info.
+    </p>
+  </MainContent>
+</Base>

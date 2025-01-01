@@ -1,0 +1,70 @@
+---
+// Layout
+import Base from "../layouts/Base.astro";
+
+// Components
+import MainContent from "../components/MainContent.astro";
+import Header from "../components/Header.astro";
+import { Image } from "astro:assets";
+
+// Images
+import cover from "/src/images/tom-1.jpg";
+---
+
+<Base title="Back Country Tours">
+  <Header>
+    <h1>Back Country Tours</h1>
+  </Header>
+  <MainContent>
+    <section class="intro">
+      <Image
+        src={cover}
+        class="cover"
+        widths={[240, 540, 720, cover.width]}
+        sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+        alt="A selfie of Tom Masterson a snowy winter day."
+        fetchpriority="high"
+        loading="eager"
+      />
+      <p class="intro">
+        Back Country Tours is a mountain guide service and ski and
+        mountaineering school recognized by the Professional Ski Instructors of
+        America. <a href="/tom-masterson/">Tom Masterson</a>, the owner and
+        principal instructor, is a PSIA-certified cross-country ski instructor
+        and mountain tour guide with thirty-five years' experience teaching
+        mountaineering, skiing, and wilderness survival skills.
+      </p>
+    </section>
+
+    <section>
+      <h2>Courses and Tours</h2>
+
+      <p>
+        Tom has also taught the High Altitude Mountaineering section of the
+        Colorado Mountain Club, the Lake Eldora Ski Area, the University of
+        British Columbia Mountaineering Club, University of Wisconsin Hoofers,
+        and Deutscher Alpenverein in Germany.
+      </p>
+
+      <p>
+        In the winter, Tom teaches cross country, back country, telemark,
+        mountain leadership, and avalanche courses. In the summer, he teaches
+        climbing and mountaineering, and guides expeditions world-wide.
+      </p>
+
+      <p>
+        <a href="/contact/">Contact</a> Tom for more information about courses and tours.
+      </p>
+    </section>
+  </MainContent>
+</Base>
+
+<style>
+  p.intro {
+    font-variant: small-caps;
+    padding: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+  }
+</style>
