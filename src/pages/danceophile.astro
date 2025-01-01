@@ -4,7 +4,7 @@ import Base from "../layouts/Base.astro";
 import HorizontalRule from "../components/HorizontalRule.astro";
 import MainContent from "../components/MainContent.astro";
 import Header from "../components/Header.astro";
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 
 // Images
 import cover from "/src/images/lessons-cover.jpg";
@@ -16,12 +16,10 @@ import wedding from "/src/images/wedding.jpg";
     <h1>Danceophile Studio</h1>
   </Header>
   <MainContent>
-    <Picture
-      class:list={"cover"}
+    <Image
       src={cover}
-      formats={["avif", "webp", "jpeg"]}
-      loading="eager"
-      fetchpriority="high"
+      widths={[240, 540, 720, cover.width]}
+      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
       alt="Two ballroom swing dancers dancing under lights."
     />
 
@@ -80,10 +78,10 @@ import wedding from "/src/images/wedding.jpg";
       <h2 id="private-instruction">
         Wedding Dance Choreography & Private Instruction
       </h2>
-      <Picture
+      <Image
         src={wedding}
-        formats={["avif", "webp", "jpeg"]}
-        loading="lazy"
+        widths={[240, 540, 720, wedding.width]}
+        sizes="(min-width: 1000px) 604px, (min-width: 860px) 62.5vw, (min-width: 680px) 604px, 93.33vw"
         alt="A bride and groom performing a dip."
       />
       <p>
