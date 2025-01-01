@@ -1,11 +1,16 @@
 ---
+// Layout
 import Base from "../layouts/Base.astro";
+
+// Components
 import HorizontalRule from "../components/HorizontalRule.astro";
 import MainContent from "../components/MainContent.astro";
 import Header from "../components/Header.astro";
+import { Image } from "astro:assets";
+
 // Images
-import { Picture } from "astro:assets";
 import cover from "/src/images/events-cover.jpg";
+
 // Data
 import { events } from "../../events.mjs";
 const cottonwood = events[0].cottonwood;
@@ -16,10 +21,10 @@ const cottonwood = events[0].cottonwood;
     <h1>Dance Events</h1>
   </Header>
   <MainContent>
-    <Picture
-      class:list={"cover"}
+    <Image
       src={cover}
-      formats={["avif", "webp", "jpeg"]}
+      widths={[240, 540, 720, cover.width]}
+      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
       alt="A group of Ukrainian folk dancers performing on a stage."
     />
     <p class="intro">

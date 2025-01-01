@@ -1,7 +1,12 @@
 ---
+// Layout
 import Base from "../layouts/Base.astro";
+
+// Components
 import HorizontalRule from "../components/HorizontalRule.astro";
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
+
+// Images
 import cover from "/src/images/tom-2.jpg";
 import MainContent from "../components/MainContent.astro";
 import Header from "../components/Header.astro";
@@ -13,12 +18,11 @@ import Header from "../components/Header.astro";
   </Header>
   <MainContent>
     <section class="intro">
-      <Picture
-        class:list={"cover"}
+      <Image
         src={cover}
-        formats={["avif", "webp", "jpeg"]}
-        loading="eager"
-        fetchpriority="high"
+        class="cover"
+        widths={[240, 540, 720, cover.width]}
+        sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
         alt="A professional head shot of Tom Masterson."
       />
       <p class="intro">
@@ -113,6 +117,6 @@ import Header from "../components/Header.astro";
   }
 
   .cover {
-    border: 15px solid white;
+    border: 0.5rem solid white;
   }
 </style>
