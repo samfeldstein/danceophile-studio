@@ -1,3 +1,7 @@
+---
+const year = new Date().getFullYear();
+---
+
 <div class="copyright small">
   <p>
     Site designed and built by <a
@@ -5,7 +9,7 @@
       target="_blank">Sam Feldstein</a
     >.
     <span>
-      Copyright © <span id="year"></span>
+      Copyright © 2024 - <span id="year">{year}</span>
       <a href="/tom-masterson/">Tom Masterson</a>. All Rights Reserved.
     </span>
   </p>
@@ -32,7 +36,3 @@
     color: var(--background-color);
   }
 </style>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
