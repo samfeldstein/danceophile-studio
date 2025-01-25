@@ -5,10 +5,14 @@ import Base from "../layouts/Base.astro";
 // Components
 import MainContent from "../components/MainContent.astro";
 import Header from "../components/Header.astro";
+import HorizontalRule from "../components/HorizontalRule.astro";
 import { Image } from "astro:assets";
 
 // Images
 import cover from "/src/images/tom-1.jpg";
+import icefall from "/src/images/khumbu-icefall.jpg";
+import gokyoLake from "/src/images/gokyo-lake.jpg";
+import crevasseBridge from "/src/images/crevasse-bridge.jpeg";
 ---
 
 <Base title="Back Country Tours">
@@ -53,8 +57,59 @@ import cover from "/src/images/tom-1.jpg";
       </p>
 
       <p>
-        <a href="/contact/">Contact</a> Tom for more information about courses and tours.
+        <a href="/contact/">Contact</a> Tom for more information about courses and
+        tours.
       </p>
+    </section>
+
+    <HorizontalRule />
+
+    <section id="photo-essay" class="photo-essay">
+      <h2>Photo Essay</h2>
+      <figure>
+        <Image
+          src={icefall}
+          widths={[240, 540, 720, icefall.width]}
+          sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+          alt="Tom climbing on a ladder on Khumbu Icefall."
+        />
+        <figcaption>Tom climbing a ladder on Khumbu Icefall.</figcaption>
+      </figure>
+      <figure>
+        <Image
+          src={gokyoLake}
+          widths={[240, 540, 720, gokyoLake.width]}
+          sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+          alt="Gokyo Lake."
+        />
+        <figcaption>Gokyo Lake.</figcaption>
+      </figure>
+      <figure>
+        <Image
+          src={crevasseBridge}
+          widths={[240, 540, 720, crevasseBridge.width]}
+          sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+          alt="Tom crossing a crevasse bridge on Mount Everest."
+        />
+        <figcaption>Crevasse Bridge, Everest.</figcaption>
+      </figure>
+
+      <section id="nepal" class="nepal">
+        <hgroup class="nepal">
+          <h3>Trekking in Nepal</h3>
+          <p>
+            <i
+              >May 1-22, 2008 (tentative dates). Hiking through the awesome
+              beauty of the world’s highest mountains.
+            </i>
+          </p>
+        </hgroup>
+
+        <p>
+          This is a hike of a lifetime. Requirements: Spirit of adventure and
+          excellent physical condition. Mountaineering skills not required.
+        </p>
+      </section>
     </section>
   </MainContent>
 </Base>
@@ -66,5 +121,35 @@ import cover from "/src/images/tom-1.jpg";
     border-style: solid;
     border-width: 1px;
     border-radius: 2px;
+  }
+
+  section.photo-essay {
+    display: grid;
+    gap: 2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  hgroup.nepal p {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  figcaption {
+    font-style: italic;
+    font-size: small;
+    margin-top: 1rem;
   }
 </style>
