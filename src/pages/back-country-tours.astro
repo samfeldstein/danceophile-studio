@@ -10,7 +10,7 @@ import { Image } from "astro:assets";
 
 // Images
 import cover from "/src/images/tom-1.jpg";
-import icefall from "/src/images/khumbu-icefall.jpg";
+import icefall from "/src/images/icefall.jpg";
 import crevasseBridge from "/src/images/crevasse-bridge.jpeg";
 import monkeyTemple from "/src/images/monkey-temple.jpg";
 import kathmandu from "/src/images/kathmandu.jpg";
@@ -116,68 +116,77 @@ import amaDablam from "/src/images/ama-dablam.jpg";
           This is a hike of a lifetime. Requirements: Spirit of adventure and
           excellent physical condition. Mountaineering skills not required.
         </p>
-        <figure>
-          <Image
-            src={monkeyTemple}
-            widths={[240, 540, 720, monkeyTemple.width]}
-            sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-            alt="Monkey Temple, Kathmandu"
-          />
-          <figcaption>Monkey Temple, Kathmandu.</figcaption>
-        </figure>
-        <figure>
-          <Image
-            src={kathmandu}
-            widths={[240, 540, 720, kathmandu.width]}
-            sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-            alt="Bustling streets of Kathmandu."
-          />
-          <figcaption>Bustling streets of Kathmandu.</figcaption>
-        </figure>
-        <figure>
-          <Image
-            src={flyingToLukla}
-            widths={[240, 540, 720, flyingToLukla.width]}
-            sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-            alt="Flying to Lukla."
-          />
-          <figcaption>
-            Flying to Lukla, one of the world's most spectacular airports; with
-            a runway that angles up to 20&deg;!
-          </figcaption>
-        </figure>
-        <figure>
-          <Image
-            src={luklaAirport}
-            widths={[240, 540, 720, luklaAirport.width]}
-            sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-            alt="A plane taking off from Lukla Airport."
-          />
-          <figcaption>Taking off from Lukla Airport.</figcaption>
-        </figure>
-        <figure>
-          <Image
-            src={suspensionBridge}
-            widths={[240, 540, 720, suspensionBridge.width]}
-            sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-            alt="Suspension bridges over a river gorge."
-          />
-          <figcaption>
-            Trekking up a gorgeous river valley over suspension bridges, past
-            spectacular water falls to Namche Bazar.
-          </figcaption>
-        </figure>
-        <figure>
-          <Image
-            src={hillarySchool}
-            widths={[240, 540, 720, hillarySchool.width]}
-            sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-            alt="Hillary School in Kumjung."
-          />
-          <figcaption>
-            Then up to the Sir Edmund Hillary School in Kumjung.
-          </figcaption>
-        </figure>
+        <div class="grid">
+          <figure>
+            <Image
+              src={monkeyTemple}
+              widths={[240, 540, 720, monkeyTemple.width]}
+              sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+              alt="Monkey Temple, Kathmandu"
+            />
+            <figcaption>Monkey Temple, Kathmandu.</figcaption>
+          </figure>
+
+          <figure>
+            <Image
+              src={kathmandu}
+              widths={[240, 540, 720, kathmandu.width]}
+              sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+              alt="Bustling streets of Kathmandu."
+            />
+            <figcaption>Bustling streets of Kathmandu.</figcaption>
+          </figure>
+        </div>
+        <div class="grid">
+          <figure>
+            <Image
+              src={flyingToLukla}
+              widths={[240, 540, 720, flyingToLukla.width]}
+              sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+              alt="Flying to Lukla."
+            />
+            <figcaption>
+              Flying to Lukla, one of the world's most spectacular airports;
+              with a runway that angles up to 20&deg;!
+            </figcaption>
+          </figure>
+
+          <figure>
+            <Image
+              src={luklaAirport}
+              widths={[240, 540, 720, luklaAirport.width]}
+              sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+              alt="A plane taking off from Lukla Airport."
+            />
+            <figcaption>Taking off from Lukla Airport.</figcaption>
+          </figure>
+        </div>
+
+        <div class="grid">
+          <figure>
+            <Image
+              src={suspensionBridge}
+              widths={[240, 540, 720, suspensionBridge.width]}
+              sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+              alt="Suspension bridges over a river gorge."
+            />
+            <figcaption>
+              Trekking up a gorgeous river valley over suspension bridges, past
+              spectacular water falls to Namche Bazar.
+            </figcaption>
+          </figure>
+          <figure>
+            <Image
+              src={hillarySchool}
+              widths={[240, 540, 720, hillarySchool.width]}
+              sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+              alt="Hillary School in Kumjung."
+            />
+            <figcaption>
+              Then up to the Sir Edmund Hillary School in Kumjung.
+            </figcaption>
+          </figure>
+        </div>
         <p>
           We hiked the spectacular Bhote Koshi valley to Thame monastery and the
           beautiful, remote village of Lundgren, home of some of the world’s
@@ -215,41 +224,31 @@ import amaDablam from "/src/images/ama-dablam.jpg";
           (5366m).
         </p>
 
-        <figure>
-          <Image
-            src={gokyoLake2}
-            widths={[240, 540, 720, gokyoLake2.width]}
-            sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-            alt="Gokyo Lake from Gokyo Ridge."
-          />
-          <figcaption>
-            Gokyo Lake (4800m), perhaps the most beautiful place I have seen on
-            this planet.
-          </figcaption>
-        </figure>
+        <div class="grid">
+          <figure>
+            <Image
+              src={glacier}
+              widths={[240, 540, 720, glacier.width]}
+              sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+              alt="Lake in middle of Ngozumpa glacier."
+            />
+            <figcaption>
+              Across Ngozumpa glacier, perhaps among the largest glaciers in the
+              world.
+            </figcaption>
+          </figure>
 
-        <figure>
-          <Image
-            src={glacier}
-            widths={[240, 540, 720, glacier.width]}
-            sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-            alt="Lake in middle of Ngozumpa glacier."
-          />
-          <figcaption>
-            Across Ngozumpa glacier, perhaps among the largest glaciers in the
-            world.
-          </figcaption>
-        </figure>
+          <figure>
+            <Image
+              src={choLaPass}
+              widths={[240, 540, 720, choLaPass.width]}
+              sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+              alt="Cho La Pass."
+            />
+            <figcaption>Cho La Pass (~5300m).</figcaption>
+          </figure>
+        </div>
 
-        <figure>
-          <Image
-            src={choLaPass}
-            widths={[240, 540, 720, choLaPass.width]}
-            sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-            alt="Cho La Pass."
-          />
-          <figcaption>Cho La Pass (~5300m).</figcaption>
-        </figure>
         <figure>
           <Image
             src={dzongla}
@@ -281,27 +280,29 @@ import amaDablam from "/src/images/ama-dablam.jpg";
           moraine to Dingboche, the town with the stone walls.
         </p>
 
-        <figure>
-          <Image
-            src={dingboche}
-            widths={[240, 540, 720, dingboche.width]}
-            sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-            alt="Dingboche."
-          />
-          <figcaption>Stone walls of Dingboche.</figcaption>
-        </figure>
+        <div class="grid">
+          <figure>
+            <Image
+              src={dingboche}
+              widths={[240, 540, 720, dingboche.width]}
+              sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+              alt="Dingboche."
+            />
+            <figcaption>Stone walls of Dingboche.</figcaption>
+          </figure>
 
-        <figure>
-          <Image
-            src={chhukung}
-            widths={[240, 540, 720, chhukung.width]}
-            sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-            alt="Chhukung."
-          />
-          <figcaption>
-            Chhukung and fluted ridge on the Chinese border.
-          </figcaption>
-        </figure>
+          <figure>
+            <Image
+              src={chhukung}
+              widths={[240, 540, 720, chhukung.width]}
+              sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+              alt="Chhukung."
+            />
+            <figcaption>
+              Chhukung and fluted ridge on the Chinese border.
+            </figcaption>
+          </figure>
+        </div>
 
         <p>
           Optional climbs of Chhukung Ri Peak (5500m) and Chhukung Peak (5800m).
@@ -310,15 +311,29 @@ import amaDablam from "/src/images/ama-dablam.jpg";
           be done in tennis shoes!
         </p>
 
-        <figure>
-          <Image
-            src={islandPeak}
-            widths={[240, 540, 720, islandPeak.width]}
-            sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-            alt="Island Peak."
-          />
-          <figcaption>Island Peak.</figcaption>
-        </figure>
+        <div class="grid">
+          <figure>
+            <Image
+              src={islandPeak}
+              widths={[240, 540, 720, islandPeak.width]}
+              sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+              alt="Island Peak."
+            />
+            <figcaption>Island Peak.</figcaption>
+          </figure>
+
+          <figure>
+            <Image
+              src={amaDablam}
+              widths={[240, 540, 720, amaDablam.width]}
+              sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+              alt="Ama Dablam."
+            />
+            <figcaption>
+              Ama Dablam, a challenging technical climb (not on this trip).
+            </figcaption>
+          </figure>
+        </div>
 
         <figure>
           <Image
@@ -329,18 +344,6 @@ import amaDablam from "/src/images/ama-dablam.jpg";
           />
           <figcaption>
             Tengboche Monastery, one of the most famous in the world.
-          </figcaption>
-        </figure>
-
-        <figure>
-          <Image
-            src={amaDablam}
-            widths={[240, 540, 720, amaDablam.width]}
-            sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-            alt="Ama Dablam."
-          />
-          <figcaption>
-            Ama Dablam, a challenging technical climb (not on this trip).
           </figcaption>
         </figure>
 
@@ -372,28 +375,41 @@ import amaDablam from "/src/images/ama-dablam.jpg";
     border-radius: 2px;
   }
 
+  p {
+    text-wrap: pretty;
+  }
+
   h3 {
-    font-size: 2rem;
+    font-size: calc(2rem + 1vw);
     margin-bottom: 1rem;
   }
 
   hgroup.nepal p {
     text-align: center;
-    font-size: 1.25rem;
+    font-size: calc(1.25rem + 0.1vw);
     margin: 0;
   }
 
   figure {
     margin: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   figcaption {
     font-style: italic;
     font-size: small;
     margin-top: 1rem;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 500px) {
+    div.grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
   }
 </style>
