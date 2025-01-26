@@ -9,7 +9,7 @@ import Header from "../components/Header.astro";
 import { Image } from "astro:assets";
 
 // Images
-import cover from "/src/images/events-cover.jpg";
+// import cover from "/src/images/events-cover.jpg";
 
 // Data
 import { events } from "../../events.mjs";
@@ -21,12 +21,12 @@ const cottonwood = events[0].cottonwood;
     <h1>Dance Events</h1>
   </Header>
   <MainContent>
-    <Image
+    <!-- <Image
       src={cover}
       widths={[240, 540, 720, cover.width]}
       sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
       alt="A group of Ukrainian folk dancers performing on a stage."
-    />
+    /> -->
     <p class="intro">
       Danceophile hosts and promotes dance events in Boulder, Northern Colorado,
       and the Denver Metro Area. Events include social dances, performances,
