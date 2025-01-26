@@ -7,7 +7,7 @@ import Header from "../components/Header.astro";
 import { Image } from "astro:assets";
 
 // Images
-import cover from "/src/images/lessons-cover.jpg";
+import cover from "/src/images/teaching-with-suzi.jpg";
 import wedding from "/src/images/wedding.jpg";
 ---
 
@@ -43,6 +43,15 @@ import wedding from "/src/images/wedding.jpg";
 
       <p><strong>No experience or partner needed.</strong></p>
 
+      <video
+        controls="controls"
+        preload="auto"
+        poster="/images/swing-video-cover.jpg"
+      >
+        <source src="/videos/swing-with-stephanie.mp4" type="video/mp4" />
+        <source src="/videos/swing-with-stephanie.webm" type="video/webm" />
+      </video>
+
       <section class="details">
         <h3 class="vis-hid">Details</h3>
         <div>
@@ -57,18 +66,14 @@ import wedding from "/src/images/wedding.jpg";
           <h4>Place</h4>
           <div>
             <a
-              class="address"
+              class="address contact"
               href="https://maps.app.goo.gl/7fttA6CCH5VmFk1S9"
-              target="_blank">Danceophile Studio</a
+              target="_blank"
             >
-          </div>
-        </div>
-        <div>
-          <h4>Cost</h4>
-          <div>
-            $105 for couples and $55 for singles. <em
-              ><strong>Rates cover the entire four-week class.</strong></em
-            >
+              <div>Danceophile Studio</div>
+              <div>250 31st St</div>
+              <div>Boulder, CO 80305</div>
+            </a>
           </div>
         </div>
       </section>
@@ -99,6 +104,37 @@ import wedding from "/src/images/wedding.jpg";
           target="_blank">Danceophile Studio</a
         >, and are available by appointment.
       </p>
+    </section>
+
+    <HorizontalRule />
+
+    <section id="niwot">
+      <h2>Dancing in Niwot</h2>
+      <video controls="controls" preload="auto" poster="/images/cottonwood.jpg">
+        <source src="/videos/cottonwood.mp4" type="video/mp4" />
+        <source src="/videos/cottonwood.webm" type="video/webm" />
+      </video>
+      <p>
+        Join us every Friday at 7PM all summer long for Salsa, Swing, Waltz,
+        Contra, and Folk dancing outside on Cottonwood Square at the corner of
+        79th and Niwot.
+      </p>
+    </section>
+
+    <HorizontalRule />
+
+    <section id="folk-dancing">
+      <h2>Folk Dancing in the Mountains</h2>
+      <p>
+        Join us at the <a
+          class="address"
+          href="https://maps.app.goo.gl/AiY4UTiUy9nm1upr5"
+          target="_blank">Nederland Community Center</a
+        > to meet wonderful folks, eat great snacks, and dance fun dances from around
+        the world.
+      </p>
+
+      <p><a href="/contact/">Contact Tom</a> for the updated schedule.</p>
     </section>
   </MainContent>
 </Base>
@@ -147,5 +183,13 @@ import wedding from "/src/images/wedding.jpg";
   .vis-hid {
     position: absolute;
     translate: -2000%;
+  }
+
+  video {
+    box-shadow: #666 0 4px 10px;
+    border-radius: 2px;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 </style>
