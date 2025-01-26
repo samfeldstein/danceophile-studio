@@ -8,7 +8,7 @@ import Header from "../components/Header.astro";
 import { Image } from "astro:assets";
 
 // Images
-// import kami from "/src/images/tom-and-kami.jpg";
+import kami from "/src/images/tom-and-kami.jpg";
 import eclipse from "/src/images/eclipse.jpeg";
 import eclipse2 from "/src/images/eclipse-2.jpeg";
 import oberek from "/src/images/oberek-suzi.jpeg";
@@ -94,13 +94,13 @@ import veronica from "/src/images/tom-veronica.jpg"
       sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
       alt="Tom with friends."
     />
-    <!-- <Image
+    <Image
       src={kami}
       class="cover"
       widths={[240, 540, 720, kami.width]}
       sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
       alt="Tom with Dr. Kami."
-    /> -->
+    />
 
     <Image
       src={eclipse}
