@@ -12,7 +12,7 @@ import { Image } from "astro:assets";
 import cover from "/src/images/tom-2.jpg";
 import sailing from "/src/images/sailing.jpg";
 import tor from "/src/images/tor-de-geants.jpg";
-import southAfrica from "/src/images/south-africa.jpg";
+import skiing from "/src/images/tom-skiing.jpg";
 ---
 
 <Base title="Tom Masterson">
@@ -84,10 +84,18 @@ import southAfrica from "/src/images/south-africa.jpg";
       </p>
 
       <Image
+        src={skiing}
+        widths={[240, 540, 720, skiing.width]}
+        sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+        alt="Tom Masterson skiing."
+      />
+
+      <Image
         src={sailing}
         widths={[240, 540, 720, sailing.width]}
         sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
         alt="Tom Masterson sailing."
+        style="margin: 1rem 0;"
       />
 
       <Image
@@ -95,14 +103,6 @@ import southAfrica from "/src/images/south-africa.jpg";
         widths={[240, 540, 720, tor.width]}
         sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
         alt="Tom Masterson at the Tor de Geants."
-        style="margin: 1rem 0;"
-      />
-
-      <Image
-        src={southAfrica}
-        widths={[240, 540, 720, southAfrica.width]}
-        sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-        alt="Tom Masterson in South Africa."
       />
     </section>
   </MainContent>

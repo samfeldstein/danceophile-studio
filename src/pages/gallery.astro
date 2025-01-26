@@ -8,9 +8,18 @@ import Header from "../components/Header.astro";
 import { Image } from "astro:assets";
 
 // Images
-import cover from "/src/images/tom-and-kami.jpg";
+import kami from "/src/images/tom-and-kami.jpg";
 import eclipse from "/src/images/eclipse.jpeg";
 import eclipse2 from "/src/images/eclipse-2.jpeg";
+import oberek from "/src/images/oberek-suzi.jpeg";
+import postoley from "/src/images/postoley-1.jpg";
+import postoley2 from "/src/images/postoley-2.jpg";
+import postoley3 from "/src/images/postoley-3.jpg";
+import postoley4 from "/src/images/postoley-4.jpg";
+import qomolangma from "/src/images/qomolangma.jpeg";
+import friends from "/src/images/tom-and-friends.jpg";
+import southAfrica from "/src/images/south-africa.jpg";
+import veronica from "/src/images/tom-veronica.jpg"
 ---
 
 <Base title="Gallery">
@@ -19,14 +28,80 @@ import eclipse2 from "/src/images/eclipse-2.jpeg";
   </Header>
   <MainContent>
     <Image
-      src={cover}
+      src={oberek}
       class="cover"
-      widths={[240, 540, 720, cover.width]}
+      widths={[240, 540, 720, oberek.width]}
       sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-      alt="A selfie of Tom Masterson a snowy winter day."
+      alt="Oberek with Suzi."
       fetchpriority="high"
       loading="eager"
     />
+    <Image
+      src={postoley}
+      class="cover"
+      widths={[240, 540, 720, postoley.width]}
+      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+      alt="Postoley."
+    />
+    <Image
+      src={postoley2}
+      class="cover"
+      widths={[240, 540, 720, postoley2.width]}
+      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+      alt="Postoley 2."
+    />
+    <Image
+      src={postoley3}
+      class="cover"
+      widths={[240, 540, 720, postoley3.width]}
+      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+      alt="Postoley 3."
+    />
+    <Image
+      src={postoley4}
+      class="cover"
+      widths={[240, 540, 720, postoley4.width]}
+      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+      alt="Postoley 4."
+    />
+
+    <Image
+      src={veronica}
+      class="cover"
+      widths={[240, 540, 720, veronica.width]}
+      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+      alt="Tom and Veronica."
+    />
+    <Image
+      src={qomolangma}
+      class="cover"
+      widths={[240, 540, 720, qomolangma.width]}
+      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+      alt="Qomolangma."
+    />
+
+    <Image
+      src={southAfrica}
+      widths={[240, 540, 720, southAfrica.width]}
+      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+      alt="Tom Masterson in South Africa."
+    />
+
+    <Image
+      src={friends}
+      class="cover"
+      widths={[240, 540, 720, friends.width]}
+      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+      alt="Tom with friends."
+    />
+    <Image
+      src={kami}
+      class="cover"
+      widths={[240, 540, 720, kami.width]}
+      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+      alt="Tom with Dr. Kami."
+    />
+
     <Image
       src={eclipse}
       class="cover"
