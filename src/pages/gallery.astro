@@ -8,14 +8,14 @@ import Header from "../components/Header.astro";
 import { Image } from "astro:assets";
 
 // Images
-import cover from "/src/images/workshops-2.jpg";
-import suzi from "/src/images/teaching-with-suzi.jpg";
-import plaza from "/src/images/folk-dancing-plaza.jpg";
+import cover from "/src/images/tom-and-kami.jpg";
+import eclipse from "/src/images/eclipse.jpeg";
+import eclipse2 from "/src/images/eclipse-2.jpeg";
 ---
 
-<Base title="Folk Dance Classes">
+<Base title="Gallery">
   <Header>
-    <h1>Folk Dance Classes</h1>
+    <h1>Gallery</h1>
   </Header>
   <MainContent>
     <Image
@@ -23,32 +23,30 @@ import plaza from "/src/images/folk-dancing-plaza.jpg";
       class="cover"
       widths={[240, 540, 720, cover.width]}
       sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-      alt="Tom Masterson posing with a group of Folk Dance students."
+      alt="A selfie of Tom Masterson a snowy winter day."
       fetchpriority="high"
       loading="eager"
     />
-
     <Image
-      src={suzi}
+      src={eclipse}
       class="cover"
-      widths={[240, 540, 720, suzi.width]}
+      widths={[240, 540, 720, eclipse.width]}
       sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-      alt="Tom Masterson teaching folk dance with a dance partner."
-      style="margin: 1rem 0;"
+      alt="A total solar eclipse."
     />
-
     <Image
-      src={plaza}
+      src={eclipse2}
       class="cover"
-      widths={[240, 540, 720, plaza.width]}
+      widths={[240, 540, 720, eclipse2.width]}
       sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-      alt="Folk dancers on a plaza."
+      alt="A total solar eclipse from another angle."
     />
-
-    <p>
-      Tom is available for folk dance workshops and classes. <a href="/contact/"
-        >Contact</a
-      > him for more info.
-    </p>
   </MainContent>
 </Base>
+
+<style>
+  img {
+    min-width: 100%;
+    margin-bottom: 1rem;
+  }
+</style>
