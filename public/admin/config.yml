@@ -1,3 +1,4 @@
+# https://docs.astro.build/en/guides/cms/decap-cms/
 backend:
   name: git-gateway
   branch: main
@@ -9,10 +10,18 @@ local_backend: true
 
 # publish_mode: editorial_workflow
 site_url: https://danceophile.com
-media_folder: /src/images/gallery/
-# public_folder: /static/images/gallery/
+media_folder: "src/images/gallery" # Location where files will be stored in the repo
+public_folder: "src/images/gallery" # The src attribute for uploaded media
 
 collections:
-  - name: "events"
-    label: "Event"
-    folder: "events"
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "src/content/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in frontmatter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
+      - { label: "Body", name: "body", widget: "markdown" }
