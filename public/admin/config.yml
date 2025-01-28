@@ -14,14 +14,31 @@ media_folder: "src/images/gallery" # Location where files will be stored in the 
 public_folder: "src/images/gallery" # The src attribute for uploaded media
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "src/content/blog" # The path to the folder where the documents are stored
+  - name: "events" # Used in routes, e.g., /admin/collections/blog
+    label: "Events" # Used in the UI
+    folder: "src/content/events" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in frontmatter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      # https://decapcms.org/docs/widgets/
+      - label: "Event Name"
+        name: "title"
+        widget: "string"
+      - label: "Event Date"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        default: ""
+      - label: Start Time
+        name: "start"
+        widget: "datetime"
+        time_format: "h:mm A"
+      - label: End Time
+        name: "end"
+        widget: "datetime"
+        time_format: "h:mm A"
+        required: false
+      - label: "Event Description"
+        name: "description"
+        widget: "string"
+        date_format: "YYYY-MM-DD"
+        required: false
