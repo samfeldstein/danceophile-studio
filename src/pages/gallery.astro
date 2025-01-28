@@ -20,7 +20,51 @@ import qomolangma from "/src/images/qomolangma.jpg";
 import friends from "/src/images/tom-and-friends.jpg";
 import southAfrica from "/src/images/south-africa.jpg";
 import veronica from "/src/images/tom-veronica.jpg";
-import swing from "/src/images/swing-video.jpg";
+
+// Functions
+// async function getGalleryImages() {
+//   const images = import.meta.glob(
+//     "/src/images/gallery/**/*.{jpg,jpeg,png,webp}",
+//     { eager: true },
+//   );
+
+//   // Make sure we have images before processing
+//   if (!images) {
+//     return [];
+//   }
+
+//   return Object.entries(images)
+//     .map(([path, module]) => {
+//       // Add error handling for missing module or default export
+//       if (!module || !module.default) {
+//         console.warn(`Missing module or default export for ${path}`);
+//         return null;
+//       }
+
+//       return {
+//         src: module.default,
+//         title: path
+//           .split("/")
+//           .pop()
+//           .replace(/\.[^/.]+$/, ""),
+//       };
+//     })
+//     .filter(Boolean); // Remove any null entries
+// }
+
+async function getGalleryImages() {
+  const images = import.meta.glob(
+    "/src/images/gallery/**/*.{jpg,jpeg,png,webp}",
+    { eager: true },
+  );
+
+  // Transform the images object into an array of objects
+  return Object.entries(images).map(([path, module]) => ({
+    src: module.default, // The default export is the image URL
+  }));
+}
+
+const galleryImages = await getGalleryImages();
 ---
 
 <Base title="Gallery">
@@ -118,13 +162,16 @@ import swing from "/src/images/swing-video.jpg";
       alt="A total solar eclipse from another angle."
     />
 
-    <Image
-      src={swing}
-      class="cover"
-      widths={[240, 540, 720, swing.width]}
-      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
-      alt="Tom swing dancing with a partner."
-    />
+    {
+      galleryImages.map((photo) => (
+        <Image
+          src={photo.src}
+          widths={[256, 691, 936, 1382, 1640, 1850, 2048]}
+          sizes="(min-width: 1020px) 691px, (min-width: 780px) calc(81.82vw - 127px), calc(100vw - 48px)"
+          alt="Danceophile gallery photo."
+        />
+      ))
+    }
   </MainContent>
 </Base>
 

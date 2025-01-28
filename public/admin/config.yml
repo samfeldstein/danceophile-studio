@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main
+  # squash_merges: true
+
+# https://decapcms.org/docs/working-with-a-local-git-repository/
+# npx decap-server
+local_backend: true
+
+# publish_mode: editorial_workflow
+site_url: https://danceophile.com
+media_folder: /src/images/gallery/
+# public_folder: /static/images/gallery/
+
+collections:
+  - name: "events"
+    label: "Event"
+    folder: "events"
