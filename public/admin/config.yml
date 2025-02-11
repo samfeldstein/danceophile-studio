@@ -42,3 +42,6 @@ collections:
         widget: "string"
         date_format: "YYYY-MM-DD"
         required: false
+      - label: "Event Location"
+        name: "location"
+        widget: "string"

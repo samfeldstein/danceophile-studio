@@ -10,10 +10,6 @@ import { Image } from "astro:assets";
 
 // Images
 // import cover from "/src/images/events-cover.jpg";
-
-// Data
-import { events } from "../../events.mjs";
-const cottonwood = events[0].cottonwood;
 ---
 
 <Base title="Events">
@@ -98,23 +94,6 @@ const cottonwood = events[0].cottonwood;
           <h4>Cost</h4>
           <div>FREE</div>
         </div>
-      </section>
-
-      <section class="schedule">
-        <h3>Summer {cottonwood[0].year} Schedule</h3>
-        <ul>
-          {
-            cottonwood.map((data) =>
-              data.events.map((event) => (
-                <li>
-                  <span class="date">{event.date}</span>
-                  <span class="dots" />
-                  <span class="dance">{event.dance}</span>
-                </li>
-              )),
-            )
-          }
-        </ul>
       </section>
       <video controls="controls" preload="auto" poster="/images/cottonwood.jpg">
         <source src="/videos/cottonwood.mp4" type="video/mp4" />

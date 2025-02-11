@@ -1,0 +1,52 @@
+---
+// Layout
+import Base from "../../layouts/Base.astro";
+
+// Components
+import MainContent from "../../components/MainContent.astro";
+import Header from "../../components/Header.astro";
+import Date from "../../components/Date.astro";
+
+// Styles
+import "../../styles/_event.css";
+
+// Collections
+import { getCollection } from "astro:content";
+
+// Functions
+// Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const events = await getCollection("events");
+  return events.map((event) => ({
+    params: { id: event.id },
+    props: { event },
+  }));
+}
+
+const { event } = Astro.props;
+---
+
+<Base title={event.data.title}>
+  <Header>
+    <h1>{event.data.title}</h1>
+  </Header>
+  <MainContent>
+    <p>{event.data.description}</p>
+    <div class="details">
+      <div>
+        <div class="details-heading">Date</div>
+        <div><Date date={event.data.date} /></div>
+      </div>
+
+      <div>
+        <div class="details-heading">Time</div>
+        <div>{event.data.start} – {event.data.end}</div>
+      </div>
+
+      <div>
+        <div class="details-heading">Place</div>
+        <div>{event.data.location}</div>
+      </div>
+    </div>
+  </MainContent>
+</Base>
