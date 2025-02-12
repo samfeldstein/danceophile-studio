@@ -49,3 +49,7 @@ p {
 a {
   font-family: unset;
 }
+
+img {
+  margin-bottom: 1rem;
+}

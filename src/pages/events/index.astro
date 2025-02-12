@@ -11,6 +11,11 @@ import "/src/styles/_events.css";
 
 import { getCollection } from "astro:content";
 
+import { Image } from "astro:assets";
+
+// Images
+import cover from "/src/images/workshops-1.jpg";
+
 const events = await getCollection("events");
 const now = new Date();
 const futureEvents = events
@@ -23,6 +28,14 @@ const futureEvents = events
     <h1>Events</h1>
   </Header>
   <MainContent>
+    <Image
+      src={cover}
+      widths={[240, 540, 720, cover.width]}
+      sizes="(min-width: 1220px) 821px, (min-width: 860px) calc(85.88vw - 210px), calc(100vw - 32px)"
+      alt="Tom and a class of Postoley folk dancers posing for the camera."
+      fetchpriority="high"
+      loading="eager"
+    />
     <p class="intro">
       Danceophile Studio hosts and promotes dance events in Boulder, Northern
       Colorado, and the Denver Metro Area. Events include social dances,
