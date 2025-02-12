@@ -5,3 +5,47 @@
   border-radius: 2px;
   font-variant: small-caps;
 }
+
+div.events {
+  display: grid;
+  gap: 2rem;
+}
+
+div.upcoming-event {
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 2rem;
+  text-align: center;
+  display: grid;
+  gap: 2rem;
+}
+
+h3.event {
+  font-size: calc(2rem + 0.5vw);
+  margin: 0;
+}
+
+h3 a {
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 0.045em;
+}
+
+h3 a:hover,
+h3 a:focus {
+  text-decoration: none;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+p {
+  /* Overrides global p rule. */
+  text-align: unset;
+  margin: 0;
+}
+
+a {
+  font-family: unset;
+}

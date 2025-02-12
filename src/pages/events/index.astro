@@ -1,0 +1,52 @@
+---
+import Base from "../../layouts/Base.astro";
+
+// Components
+import HorizontalRule from "../../components/HorizontalRule.astro";
+import MainContent from "../../components/MainContent.astro";
+import Header from "../../components/Header.astro";
+import ReadableDate from "../../components/ReadableDate.astro";
+
+import "/src/styles/_events.css";
+
+import { getCollection } from "astro:content";
+
+const events = await getCollection("events");
+const now = new Date();
+const futureEvents = events
+  .filter((event) => new Date(event.data.date) > now)
+  .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
+---
+
+<Base title="Events">
+  <Header>
+    <h1>Events</h1>
+  </Header>
+  <MainContent>
+    <p class="intro">
+      Danceophile Studio hosts and promotes dance events in Boulder, Northern
+      Colorado, and the Denver Metro Area. Events include social dances,
+      performances, workshops, and more.
+    </p>
+
+    <HorizontalRule />
+
+    <div class="events">
+      {
+        futureEvents.map((event) => (
+          <div class="upcoming-event">
+            <h3 class="event">
+              <a href={`/events/${event.id}/`}>{event.data.title}</a>
+            </h3>
+            <p class="details">
+              <time>
+                <ReadableDate date={event.data.date} />
+              </time>{" "}
+              | <time>{event.data.start}</time> | {event.data.location}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </MainContent>
+</Base>
