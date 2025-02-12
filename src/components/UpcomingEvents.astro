@@ -1,0 +1,71 @@
+---
+import ReadableDate from "./ReadableDate.astro";
+import { getCollection } from "astro:content";
+const events = await getCollection("events");
+const now = new Date();
+const futureEvents = events
+  .filter((event) => new Date(event.data.date) > now)
+  .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
+---
+
+<div class="events">
+  {
+    futureEvents.slice(0, 3).map((event) => (
+      <div class="upcoming-event">
+        <h3 class="event">
+          <a href={`/events/${event.id}/`}>{event.data.title}</a>
+        </h3>
+        <p class="details">
+          <time>
+            <ReadableDate date={event.data.date} />
+          </time>{" "}
+          | <time>{event.data.start}</time> | {event.data.location}
+        </p>
+      </div>
+    ))
+  }
+</div>
+
+
+<style>
+div.events {
+  display: grid;
+  gap: 2rem;
+}
+  
+  div.upcoming-event {
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+  }
+
+  h3.event {
+    font-size: calc(2rem + 0.5vw);
+    margin: 0;
+  }
+
+  h3 a {
+    text-underline-offset: 0.15em;
+    text-decoration-thickness: 0.045em;
+  }
+
+  h3 a:hover,
+  h3 a:focus {
+    text-decoration: none;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  p {
+    /* Overrides global p rule. */
+    text-align: unset;
+    margin: 0;
+    font-size: calc(1.25rem + 0.5vw);
+  }
+</style>

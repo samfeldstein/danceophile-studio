@@ -5,7 +5,7 @@ import Base from "../../layouts/Base.astro";
 // Components
 import MainContent from "../../components/MainContent.astro";
 import Header from "../../components/Header.astro";
-import Date from "../../components/Date.astro";
+import Date from "../../components/ReadableDate.astro";
 
 // Styles
 import "../../styles/_event.css";
@@ -24,6 +24,7 @@ export async function getStaticPaths() {
 }
 
 const { event } = Astro.props;
+
 ---
 
 <Base title={event.data.title}>

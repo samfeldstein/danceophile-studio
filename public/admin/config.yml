@@ -36,7 +36,6 @@ collections:
         name: "end"
         widget: "datetime"
         time_format: "h:mm A"
-        required: false
       - label: "Event Description"
         name: "description"
         widget: "string"

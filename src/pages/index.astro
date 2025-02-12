@@ -7,6 +7,7 @@ import HorizontalRule from "../components/HorizontalRule.astro";
 import EmailForm from "../components/EmailForm.astro";
 import ContactForm from "../components/ContactForm.astro";
 import { Image } from "astro:assets";
+import UpcomingEvents from "../components/UpcomingEvents.astro";
 
 // Images
 import flyout from "/src/images/flyout.jpg";
@@ -91,6 +92,13 @@ import niwot from "/src/images/cottonwood.jpg";
           />
         </a>
       </section>
+
+      <section class="upcoming">
+        <h2>Upcoming Events</h2>
+        <UpcomingEvents />
+      </section>
+
+      
 
       <section class="directory">
         <h2>Site Directory</h2>
@@ -220,6 +228,11 @@ import niwot from "/src/images/cottonwood.jpg";
     display: grid;
   }
 
+  section.upcoming {
+    font-variant: small-caps;
+    margin: 10rem auto;
+  }
+
   a.pics {
     display: flex;
     flex-direction: column;
@@ -318,13 +331,13 @@ import niwot from "/src/images/cottonwood.jpg";
     font-size: calc(1.75rem + 1vw);
   }
 
-div.forms {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  max-width: 50rem;
-  margin: 0 auto;
-}
+  div.forms {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 50rem;
+    margin: 0 auto;
+  }
 
   .social {
     display: flex;
