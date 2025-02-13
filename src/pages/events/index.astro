@@ -17,10 +17,8 @@ import { Image } from "astro:assets";
 import cover from "/src/images/workshops-1.jpg";
 
 const events = await getCollection("events");
-const now = new Date();
-const futureEvents = events
-  .filter((event) => new Date(event.data.date) > now)
-  .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
+
+events.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
 ---
 
 <Base title="Events">
@@ -46,7 +44,7 @@ const futureEvents = events
 
     <div class="events">
       {
-        futureEvents.map((event) => (
+        events.map((event) => (
           <div class="upcoming-event">
             <h3 class="event">
               <a href={`/events/${event.id}/`}>{event.data.title}</a>
