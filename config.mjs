@@ -7,5 +7,5 @@ export const site = {
 
 export const dev = {
   name: "Sam Feldstein",
-  email: "samuelfeldstein@proton.me"
+  email: "sam@samfeldstein.xyz"
 }
