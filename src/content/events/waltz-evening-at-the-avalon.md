@@ -1,5 +1,5 @@
 ---
-title: Waltz evening at the Avalon
+title: Waltz evening tonight at the Avalon
 date: 2025-02-26
 start: 6:30 PM
 end: 9:30 PM
